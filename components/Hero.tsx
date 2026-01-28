@@ -240,27 +240,17 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Logo and system status */}
+            {/* System status */}
             <motion.div
-              className="flex items-center gap-4 mb-8"
+              className="flex items-center gap-2 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="relative w-12 h-12">
-                <Image
-                  src="/images/decoding-genius-logo.png"
-                  alt="Decoding Genius"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-white/60 shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
-                <span className="text-[10px] font-mono text-white/50 tracking-[0.2em]">
-                  SYSTEM ONLINE
-                </span>
-              </div>
+              <span className="w-1.5 h-1.5 rounded-full bg-white/60 shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
+              <span className="text-[10px] font-mono text-white/50 tracking-[0.2em]">
+                SYSTEM ONLINE
+              </span>
             </motion.div>
 
             {/* Main heading */}
