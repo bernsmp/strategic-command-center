@@ -1,0 +1,170 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,33525,(e,t,s)=>{"use strict";Object.defineProperty(s,"__esModule",{value:!0}),Object.defineProperty(s,"warnOnce",{enumerable:!0,get:function(){return a}});let a=e=>{}},72520,e=>{"use strict";let t=(0,e.i(75254).default)("arrow-right",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]]);e.s(["ArrowRight",()=>t],72520)},55436,e=>{"use strict";let t=(0,e.i(75254).default)("search",[["path",{d:"m21 21-4.34-4.34",key:"14j7rj"}],["circle",{cx:"11",cy:"11",r:"8",key:"4ej97u"}]]);e.s(["Search",()=>t],55436)},83086,74886,43531,80169,e=>{"use strict";var t=e.i(75254);let s=(0,t.default)("sparkles",[["path",{d:"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",key:"1s2grr"}],["path",{d:"M20 2v4",key:"1rf3ol"}],["path",{d:"M22 4h-4",key:"gwowj6"}],["circle",{cx:"4",cy:"20",r:"2",key:"6kqj1y"}]]);e.s(["Sparkles",()=>s],83086);let a=(0,t.default)("copy",[["rect",{width:"14",height:"14",x:"8",y:"8",rx:"2",ry:"2",key:"17jyea"}],["path",{d:"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",key:"zix9uf"}]]);e.s(["Copy",()=>a],74886);let i=(0,t.default)("check",[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]]);e.s(["Check",()=>i],43531);let o=[{slug:"perceptual-asymmetry",number:1,title:"Perceptual Asymmetry",subtitle:"THE ROOT OF BREAKTHROUGH THINKING",jayQuote:"You can't see what you're standing too close to.",corePrinciple:"The owner is always too close to see the real problem—and the real opportunity.",whatJaySees:`When Jay walks into a business, he does something most consultants don't. He ignores the problem.
+
+The owner spends twenty minutes unloading everything that's broken—leads dried up, cash flow's a mess, some competitor eating their lunch.
+
+Instead of immediately shouting out an answer, he gets curious. He collects context. He asks questions they probably haven't been asked before.
+
+Jay assumes the stated problem is never the real problem, because in almost every situation, the owner is too close to see it.`,keyInsight:"Your greatest assets fade into the background. Your biggest opportunities become 'just the way things are.' The thing you know best becomes the thing you can't see clearly.",stories:[{title:"The $1 Million Truck",hook:"One truck. One restaurant. One million dollar contract.",story:`A roofing company with thirty years of solid reputation had a dozen trucks sitting behind a chain-link fence every weekend. Nicely decaled, company logo, phone number in big graphics. They just sat there. Invisible.
+
+Jay asked one question: "What happens to your trucks on weekends?"
+
+His solution was simple. Hire two kids to drive the trucks on weekends to shopping centers, beaches—anywhere with high foot traffic. Cost: $1,200 for a weekend. Profit on one roofing job: $15,000.
+
+Before they even implemented the full strategy, a single truck parked at a restaurant caught an HOA board member's eye.
+
+He called that afternoon. One million dollar HOA contract.`,lesson:"Thirty years in business. Ten thousand times walking past those trucks without seeing them. The million-dollar contract was always there—she just couldn't see it until someone else did."},{title:"The $500 Million Reframe",hook:"They thought they had a marketing problem. Jay saw a completely different business.",story:`A small gold brokerage in Minneapolis was doing about $300,000 in revenue. Gold newsletters were exploding, and they had no idea how to reach buyers.
+
+But Jay didn't see a brokerage with a marketing problem.
+
+He saw a media company that didn't know it was a media company.
+
+A subscriber base that could be monetized multiple ways. Inserts. Renewals. Backend offers. The brokerage was the least interesting thing they owned.
+
+Within a couple of years, that $300,000 company grew to $500 million.`,lesson:"They knew they needed marketing help. They had no idea they were sitting on a completely different business entirely."}],threeChecks:[{area:"Your Calendar",question:"What are you spending time on that's worth $50/hour when you're capable of $1,000/hour work? What tasks have you kept because they've always been yours?"},{area:"Your Assets",question:"What do you own, control, or have access to that sits idle? Equipment. Lists. Relationships. Knowledge. Expertise you stopped charging for years ago."},{area:"Your Constraints",question:"What have you accepted as permanent that might just be habit? 'Our margins are too thin.' 'That's not how our customers buy.' 'We tried that.' Jay leans in when he hears these."}],howAiFitsIn:`Most people use AI backwards. They ask for answers and get generic responses. Surface-level advice and the same stuff sitting on business bookshelves since 2003.
+
+The value isn't in answers. The value is in questions.
+
+Jay doesn't tell clients what to do. He asks questions that make invisible opportunities visible. He forces them to see what they'd stopped seeing.
+
+AI hasn't gotten used to your business. It doesn't know "that's how we've always done it." It has no emotional attachment to your current way of operating. It can look at your situation the way you'd look at someone else's.`,prompt:{title:"The Perceptual Asymmetry Audit",description:"See your business the way Jay would see it—spotting the hidden assets and blind spots that proximity has made invisible.",isGeniusExtraction:!0,content:`You are a strategic advisor trained in Jay Abraham's methodology of Perceptual Asymmetry—the principle that business owners are always too close to their own operations to see their biggest opportunities.
+
+I'm going to describe my business. Your job is NOT to solve my stated problems. Your job is to:
+
+1. **Question my assumptions** - What am I treating as fixed that might be flexible?
+2. **Find my hidden assets** - What do I own, control, or have access to that I'm not leveraging?
+3. **Identify my blind spots** - What have I stopped seeing because it's "just how we do things"?
+
+Ask me the questions Jay would ask. The ones that make me pause. The ones I haven't been asked before.
+
+After I describe my business, start with ONE powerful question—the kind that makes the room go quiet.
+
+---
+
+**My Business:**
+[Describe your business in 2-3 paragraphs. Include: what you sell, who you serve, your main challenges, and what you believe is holding you back.]`}},{slug:"irreplaceability",number:2,title:"Irreplaceability",subtitle:"BECOME THE ONLY LOGICAL CHOICE",jayQuote:"It's not about being louder. It's about being indispensable. It's about becoming the only logical choice in your market.",corePrinciple:"Position your business so they can only choose you.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Irreplaceability Audit",description:"Evaluate and strengthen your market position using Jay's Irreplaceability framework.",isGeniusExtraction:!0,content:`Evaluate and strengthen my market position using Jay Abraham's Irreplaceability framework.
+
+My business: [DESCRIBE BRIEFLY]
+My main competitors: [LIST 2-3]
+
+Analyze:
+1. On what dimensions am I currently replaceable?
+2. What would need to be true for a customer to have NO alternative to me?
+3. The "only I can" statement I could truthfully make
+4. Three investments I could make to widen the irreplaceability moat
+5. The risk if I stay replaceable vs. the opportunity if I become irreplaceable`}},{slug:"super-synthesis",number:3,title:"Super-Synthesis",subtitle:"CROSS-INDUSTRY PATTERN RECOGNITION",jayQuote:"The answer to your problem has already been solved—in an industry you've never looked at.",corePrinciple:"Find solutions by synthesizing patterns across unrelated industries.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Super-Synthesis Question Generator",description:"Generate breakthrough questions using Jay's cross-industry synthesis method.",isGeniusExtraction:!0,content:`Generate breakthrough questions using Jay Abraham's cross-industry synthesis method.
+
+My industry: [YOUR INDUSTRY]
+My specific challenge: [THE PROBLEM]
+
+Do this:
+1. Identify 3 unrelated industries that have solved a similar fundamental problem
+2. For each industry, extract the underlying principle (not the tactic)
+3. Show me how to adapt each principle to my specific context
+4. Create a synthesis that combines elements from all three
+5. Give me the one question I should be asking that no one in my industry is asking`}},{slug:"infinite-leverage",number:4,title:"Infinite Leverage",subtitle:"MULTIPLY EVERY UNIT OF EFFORT",jayQuote:"Why do something once when you can do it once and benefit forever?",corePrinciple:"Design systems that multiply every unit of effort into multiple units of result.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Infinite Leverage Audit",description:"Identify and architect leverage points that multiply your results.",isGeniusExtraction:!0,content:`Help me architect infinite leverage using Jay Abraham's methodology.
+
+My business: [DESCRIBE]
+
+Analyze:
+1. What am I doing repeatedly that could be systematized once?
+2. What partnerships could multiply my reach without multiplying my effort?
+3. What one-time efforts could produce ongoing returns?
+4. Where am I trading time for money when I could be trading systems for money?
+5. Design my infinite leverage system—the structure that works while I sleep.`}},{slug:"value-multiplication",number:5,title:"Value Multiplication",subtitle:"THE THREE WAYS COMPOUND EFFECT",jayQuote:"There are only three ways to grow a business: more customers, higher transaction value, more frequent purchases. Master all three and the math becomes exponential.",corePrinciple:"Stack the three growth levers for compound results.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Three Ways Growth Calculator",description:"Calculate your compound growth potential using Jay's Three Ways framework.",isGeniusExtraction:!1,content:`Using Jay Abraham's "Three Ways to Grow a Business" framework, calculate my growth potential.
+
+Current metrics:
+- Number of customers: [X]
+- Average transaction value: $[Y]
+- Purchase frequency per year: [Z]
+
+Show me:
+1. If I increase each by just 10%, what's my total revenue growth?
+2. Which of the three levers has the biggest opportunity in my business?
+3. Three specific tactics for the highest-potential lever
+4. A 90-day implementation roadmap`}},{slug:"guaranteed-upside",number:6,title:"Guaranteed Upside",subtitle:"RISK REVERSAL & PREEMINENCE",jayQuote:"When you take away the risk, you take away the reason to say no.",corePrinciple:"Structure offers so the customer has nothing to lose and everything to gain.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Risk Reversal Architect",description:"Design irresistible offers using Jay's risk reversal methodology.",isGeniusExtraction:!0,content:`Help me design a risk reversal strategy using Jay Abraham's methodology.
+
+My offer: [DESCRIBE WHAT YOU SELL]
+Current objections I hear: [LIST 2-3]
+
+Create:
+1. What specific risks does my customer perceive (real or imagined)?
+2. How can I absorb or eliminate each risk?
+3. A guarantee structure that makes saying "yes" the obvious choice
+4. The psychological shift this creates in the buyer's mind
+5. How to communicate this without sounding desperate`}},{slug:"constraint-inversion",number:7,title:"Constraint Inversion",subtitle:"LOVE WHAT YOU'VE BEEN TRAINED TO HATE",jayQuote:"Your biggest constraint isn't holding you back. Your perception of it is.",corePrinciple:"Transform limitations into your greatest competitive advantages.",whatJaySees:"Coming soon...",keyInsight:"Coming soon...",stories:[],threeChecks:[],howAiFitsIn:"Coming soon...",prompt:{title:"The Constraint Inversion Matrix",description:"Transform your biggest limitation into your greatest advantage.",isGeniusExtraction:!0,content:`Apply Jay Abraham's Constraint Inversion principle to my biggest limitation.
+
+My constraint: [DESCRIBE THE LIMITATION]
+
+Walk me through:
+1. What assumptions am I making about this constraint?
+2. Who has turned a similar constraint into an advantage?
+3. What would my business look like if this constraint was actually my greatest asset?
+4. Three unconventional strategies to leverage this "weakness"
+5. The first counterintuitive move I should make tomorrow`}}];function n(e){return o.find(t=>t.slug===e)}e.s(["getPrincipleBySlug",()=>n,"principles",0,o],80169)},14886,e=>{"use strict";var t=e.i(43476),s=e.i(46932),a=e.i(55436),i=e.i(75254);let o=(0,i.default)("funnel",[["path",{d:"M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z",key:"sc7q7i"}]]);var n=e.i(83086),r=e.i(72520);let l=(0,i.default)("book-open",[["path",{d:"M12 7v14",key:"1akyts"}],["path",{d:"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",key:"ruj8y"}]]);var c=e.i(71645),h=e.i(22016),u=e.i(72776);e.i(47167);var d=e.i(31178),p=e.i(47414),m=e.i(74008),y=e.i(21476),g=e.i(72846),x=c,f=e.i(37806);function b(e,t){if("function"==typeof e)return e(t);null!=e&&(e.current=t)}class w extends x.Component{getSnapshotBeforeUpdate(e){let t=this.props.childRef.current;if(t&&e.isPresent&&!this.props.isPresent){let e=t.offsetParent,s=(0,g.isHTMLElement)(e)&&e.offsetWidth||0,a=(0,g.isHTMLElement)(e)&&e.offsetHeight||0,i=this.props.sizeRef.current;i.height=t.offsetHeight||0,i.width=t.offsetWidth||0,i.top=t.offsetTop,i.left=t.offsetLeft,i.right=s-i.width-i.left,i.bottom=a-i.height-i.top}return null}componentDidUpdate(){}render(){return this.props.children}}function v({children:e,isPresent:s,anchorX:a,anchorY:i,root:o}){let n=(0,x.useId)(),r=(0,x.useRef)(null),l=(0,x.useRef)({width:0,height:0,top:0,left:0,right:0,bottom:0}),{nonce:h}=(0,x.useContext)(f.MotionConfigContext),u=function(...e){return c.useCallback(function(...e){return t=>{let s=!1,a=e.map(e=>{let a=b(e,t);return s||"function"!=typeof a||(s=!0),a});if(s)return()=>{for(let t=0;t<a.length;t++){let s=a[t];"function"==typeof s?s():b(e[t],null)}}}}(...e),e)}(r,e.props?.ref??e?.ref);return(0,x.useInsertionEffect)(()=>{let{width:e,height:t,top:c,left:u,right:d,bottom:p}=l.current;if(s||!r.current||!e||!t)return;let m="left"===a?`left: ${u}`:`right: ${d}`,y="bottom"===i?`bottom: ${p}`:`top: ${c}`;r.current.dataset.motionPopId=n;let g=document.createElement("style");h&&(g.nonce=h);let x=o??document.head;return x.appendChild(g),g.sheet&&g.sheet.insertRule(`
+          [data-motion-pop-id="${n}"] {
+            position: absolute !important;
+            width: ${e}px !important;
+            height: ${t}px !important;
+            ${m}px !important;
+            ${y}px !important;
+          }
+        `),()=>{x.contains(g)&&x.removeChild(g)}},[s]),(0,t.jsx)(w,{isPresent:s,childRef:r,sizeRef:l,children:x.cloneElement(e,{ref:u})})}let I=({children:e,initial:s,isPresent:a,onExitComplete:i,custom:o,presenceAffectsLayout:n,mode:r,anchorX:l,anchorY:h,root:u})=>{let d=(0,p.useConstant)(k),m=(0,c.useId)(),g=!0,x=(0,c.useMemo)(()=>(g=!1,{id:m,initial:s,isPresent:a,custom:o,onExitComplete:e=>{for(let t of(d.set(e,!0),d.values()))if(!t)return;i&&i()},register:e=>(d.set(e,!1),()=>d.delete(e))}),[a,d,i]);return n&&g&&(x={...x}),(0,c.useMemo)(()=>{d.forEach((e,t)=>d.set(t,!1))},[a]),c.useEffect(()=>{a||d.size||!i||i()},[a]),"popLayout"===r&&(e=(0,t.jsx)(v,{isPresent:a,anchorX:l,anchorY:h,root:u,children:e})),(0,t.jsx)(y.PresenceContext.Provider,{value:x,children:e})};function k(){return new Map}var N=e.i(64978);let j=e=>e.key||"";function E(e){let t=[];return c.Children.forEach(e,e=>{(0,c.isValidElement)(e)&&t.push(e)}),t}let T=({children:e,custom:s,initial:a=!0,onExitComplete:i,presenceAffectsLayout:o=!0,mode:n="sync",propagate:r=!1,anchorX:l="left",anchorY:h="top",root:u})=>{let[y,g]=(0,N.usePresence)(r),x=(0,c.useMemo)(()=>E(e),[e]),f=r&&!y?[]:x.map(j),b=(0,c.useRef)(!0),w=(0,c.useRef)(x),v=(0,p.useConstant)(()=>new Map),k=(0,c.useRef)(new Set),[T,C]=(0,c.useState)(x),[A,S]=(0,c.useState)(x);(0,m.useIsomorphicLayoutEffect)(()=>{b.current=!1,w.current=x;for(let e=0;e<A.length;e++){let t=j(A[e]);f.includes(t)?(v.delete(t),k.current.delete(t)):!0!==v.get(t)&&v.set(t,!1)}},[A,f.length,f.join("-")]);let R=[];if(x!==T){let e=[...x];for(let t=0;t<A.length;t++){let s=A[t],a=j(s);f.includes(a)||(e.splice(t,0,s),R.push(s))}return"wait"===n&&R.length&&(e=R),S(E(e)),C(x),null}let{forceRender:L}=(0,c.useContext)(d.LayoutGroupContext);return(0,t.jsx)(t.Fragment,{children:A.map(e=>{let c=j(e),d=(!r||!!y)&&(x===A||f.includes(c));return(0,t.jsx)(I,{isPresent:d,initial:(!b.current||!!a)&&void 0,custom:s,presenceAffectsLayout:o,mode:n,root:u,onExitComplete:d?void 0:()=>{if(k.current.has(c)||(k.current.add(c),!v.has(c)))return;v.set(c,!0);let e=!0;v.forEach(t=>{t||(e=!1)}),e&&(L?.(),S(w.current),r&&g?.(),i&&i())},anchorX:l,anchorY:h,children:e},c)})})};var C=e.i(74886);let A=(0,i.default)("external-link",[["path",{d:"M15 3h6v6",key:"1q9fwt"}],["path",{d:"M10 14 21 3",key:"gplh6r"}],["path",{d:"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",key:"a6xqqp"}]]),S=(0,i.default)("chevron-down",[["path",{d:"m6 9 6 6 6-6",key:"qrunsl"}]]),R=(0,i.default)("chevron-up",[["path",{d:"m18 15-6-6-6 6",key:"153udz"}]]);var L=e.i(43531);let P={jayi:()=>(0,t.jsx)("svg",{viewBox:"0 0 24 24",className:"w-4 h-4",fill:"currentColor",children:(0,t.jsx)("path",{d:"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"})}),claude:()=>(0,t.jsxs)("svg",{viewBox:"0 0 24 24",className:"w-4 h-4",fill:"currentColor",children:[(0,t.jsx)("circle",{cx:"12",cy:"12",r:"10",fill:"none",stroke:"currentColor",strokeWidth:"1.5"}),(0,t.jsx)("path",{d:"M8 12h8M12 8v8",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round"})]}),chatgpt:()=>(0,t.jsxs)("svg",{viewBox:"0 0 24 24",className:"w-4 h-4",fill:"currentColor",children:[(0,t.jsx)("path",{d:"M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10z",fill:"none",stroke:"currentColor",strokeWidth:"1.5"}),(0,t.jsx)("path",{d:"M12 6v12M6 12h12",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round"})]})};function M({platform:e,label:a,url:i,prompt:o}){let[n,r]=(0,c.useState)(!1),l=async e=>{if(e.preventDefault(),e.stopPropagation(),i)window.open(i,"_blank");else try{await navigator.clipboard.writeText(o),r(!0),setTimeout(()=>r(!1),2e3)}catch(e){console.error("Failed to copy:",e)}},h=P[e];return(0,t.jsx)(s.motion.button,{type:"button",className:`action-terminal group relative ${n?"!border-teal !text-teal !bg-teal/10":""}`,onClick:l,whileHover:{scale:1.02},whileTap:{scale:.98},children:n?(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(L.Check,{className:"w-4 h-4 text-teal"}),(0,t.jsx)("span",{children:"COPIED!"})]}):(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(h,{}),(0,t.jsx)("span",{children:a}),i?(0,t.jsx)(A,{className:"w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity"}):(0,t.jsx)(C.Copy,{className:"w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity"})]})})}function O({title:e,category:a,principle:i,prompt:o,description:r,tags:l=[],isGeniusExtraction:h=!1,jayiUrl:u}){let[d,p]=(0,c.useState)(!1);return(0,t.jsxs)(s.motion.div,{className:"oracle-card rounded-xl overflow-hidden group",initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-50px"},transition:{duration:.5},layout:!0,children:[(0,t.jsx)("div",{className:"p-5 border-b border-white/5",children:(0,t.jsx)("div",{className:"flex items-start justify-between gap-4",children:(0,t.jsxs)("div",{className:"flex-1 min-w-0",children:[(0,t.jsxs)("div",{className:"flex flex-wrap items-center gap-2 mb-3",children:[(0,t.jsx)("span",{className:"px-2 py-0.5 text-[10px] font-mono tracking-wider text-teal border border-teal/30 rounded bg-teal/5",children:a}),i&&(0,t.jsx)("span",{className:"px-2 py-0.5 text-[10px] font-mono tracking-wider text-slate border border-white/10 rounded",children:i}),h&&(0,t.jsxs)("span",{className:"px-2 py-0.5 text-[10px] font-mono tracking-wider text-yellow-500 border border-yellow-500/30 rounded bg-yellow-500/5 flex items-center gap-1",children:[(0,t.jsx)(n.Sparkles,{className:"w-3 h-3"}),"GENIUS EXTRACTION™"]})]}),(0,t.jsx)("h3",{className:"font-medium text-paper text-lg leading-tight",children:e}),r&&(0,t.jsx)("p",{className:"mt-2 text-sm text-slate line-clamp-2",children:r})]})})}),(0,t.jsxs)("div",{className:"p-5 bg-white/[0.01]",children:[(0,t.jsxs)("div",{className:"flex items-center justify-between mb-3",children:[(0,t.jsx)("span",{className:"text-[10px] font-mono text-slate tracking-wider",children:"PROMPT"}),(0,t.jsx)("button",{onClick:()=>p(!d),className:"flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono text-teal tracking-wider border border-teal/30 rounded hover:bg-teal/10 transition-colors",children:d?(0,t.jsxs)(t.Fragment,{children:["COLLAPSE",(0,t.jsx)(R,{className:"w-3 h-3"})]}):(0,t.jsxs)(t.Fragment,{children:["EXPAND",(0,t.jsx)(S,{className:"w-3 h-3"})]})})]}),(0,t.jsx)(T,{mode:"wait",children:(0,t.jsx)(s.motion.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.15},className:`font-mono text-sm text-slate/90 leading-relaxed whitespace-pre-wrap ${d?"":"line-clamp-3"}`,children:o},d?"expanded":"collapsed")})]}),l.length>0&&(0,t.jsx)("div",{className:"px-5 pb-3 flex flex-wrap gap-2",children:l.map(e=>(0,t.jsxs)("span",{className:"text-[10px] font-mono text-slate/60 tracking-wider",children:["#",e]},e))}),(0,t.jsxs)("div",{className:"p-5 border-t border-white/5 bg-white/[0.015]",children:[(0,t.jsx)("div",{className:"flex items-center gap-2 mb-3",children:(0,t.jsx)("span",{className:"text-[10px] font-mono text-slate tracking-wider",children:"ACTION TERMINALS"})}),(0,t.jsxs)("div",{className:"flex flex-wrap gap-2",children:[(0,t.jsx)(M,{platform:"jayi",label:"JAY-I",url:u,prompt:o}),(0,t.jsx)(M,{platform:"claude",label:"CLAUDE",prompt:o}),(0,t.jsx)(M,{platform:"chatgpt",label:"CHATGPT",prompt:o})]})]})]})}function G({children:e}){return(0,t.jsx)("div",{className:"grid gap-6 sm:grid-cols-2 lg:grid-cols-3",children:e})}var H=e.i(80169);let W=[{id:1,title:"Hidden Asset Discovery Audit",category:"DIAGNOSIS",principle:"PERCEPTUAL ASYMMETRY",isGeniusExtraction:!0,prompt:`Analyze my business through Jay Abraham's "Hidden Asset" lens. I'll describe my business, and you'll identify at least 5 overlooked assets I'm not leveraging.
+
+For each hidden asset, tell me:
+1. What it is and why it qualifies as an asset
+2. The current "leak" - how value is being lost
+3. One specific monetization strategy with a 90-day action plan
+4. The potential revenue impact (conservative estimate)
+
+My business: [DESCRIBE YOUR BUSINESS]`,description:"Uncover the assets hiding in plain sight. Based on Jay's methodology of finding value others miss.",tags:["assets","leverage","opportunity"],jayiUrl:"https://jayi.app/prompt/hidden-asset"},{id:2,title:"Three Ways Growth Calculator",category:"STRATEGY",principle:"VALUE MULTIPLICATION",prompt:`Using Jay Abraham's "Three Ways to Grow a Business" framework, calculate my growth potential.
+
+Current metrics:
+- Number of customers: [X]
+- Average transaction value: $[Y]
+- Purchase frequency per year: [Z]
+
+Show me:
+1. If I increase each by just 10%, what's my total revenue growth?
+2. Which of the three levers has the biggest opportunity in my business?
+3. Three specific tactics for the highest-potential lever
+4. A 90-day implementation roadmap`,description:"The compound math that turned this simple framework into $75B in client results.",tags:["growth","math","leverage"]},{id:3,title:"Partnership Preeminence Script",category:"EXECUTION",principle:"INFINITE LEVERAGE",isGeniusExtraction:!0,prompt:`Write a partnership proposal using Jay Abraham's "Preeminence" philosophy.
+
+I want to approach [COMPANY/PERSON] for a strategic partnership.
+
+My offer: [WHAT I BRING]
+What I want: [DESIRED OUTCOME]
+
+Create:
+1. An opening that demonstrates I've done my homework on THEIR business
+2. A value proposition framed around THEIR success (not mine)
+3. A risk-reversal that makes saying "yes" the obvious choice
+4. A specific next step that's low-commitment but high-momentum`,description:"The approach that turns cold outreach into warm welcomes. Lead with their success.",tags:["partnerships","preeminence","outreach"],jayiUrl:"https://jayi.app/prompt/partnership"},{id:4,title:"Constraint Inversion Matrix",category:"REFRAME",principle:"CONSTRAINT INVERSION",isGeniusExtraction:!0,prompt:`Apply Jay Abraham's Constraint Inversion principle to my biggest limitation.
+
+My constraint: [DESCRIBE THE LIMITATION]
+
+Walk me through:
+1. What assumptions am I making about this constraint?
+2. Who has turned a similar constraint into an advantage?
+3. What would my business look like if this constraint was actually my greatest asset?
+4. Three unconventional strategies to leverage this "weakness"
+5. The first counterintuitive move I should make tomorrow`,description:"The seventh principle: Learn to love what you've been trained to hate.",tags:["constraints","reframe","innovation"]},{id:5,title:"Super-Synthesis Question Generator",category:"THINKING",principle:"SUPER-SYNTHESIS",prompt:`Generate breakthrough questions using Jay Abraham's cross-industry synthesis method.
+
+My industry: [YOUR INDUSTRY]
+My specific challenge: [THE PROBLEM]
+
+Do this:
+1. Identify 3 unrelated industries that have solved a similar fundamental problem
+2. For each industry, extract the underlying principle (not the tactic)
+3. Show me how to adapt each principle to my specific context
+4. Create a synthesis that combines elements from all three
+5. Give me the one question I should be asking that no one in my industry is asking`,description:"See patterns across 1,000+ industries. Find answers where no one else is looking.",tags:["synthesis","innovation","questions"]},{id:6,title:"Irreplaceability Audit",category:"POSITIONING",principle:"IRREPLACEABILITY",prompt:`Evaluate and strengthen my market position using Jay's Irreplaceability framework.
+
+My business: [DESCRIBE BRIEFLY]
+My main competitors: [LIST 2-3]
+
+Analyze:
+1. On what dimensions am I currently replaceable?
+2. What would need to be true for a customer to have NO alternative to me?
+3. The "only I can" statement I could truthfully make
+4. Three investments I could make to widen the irreplaceability moat
+5. The risk if I stay replaceable vs. the opportunity if I become irreplaceable`,description:"Move from commodity to category of one. Create the moat that can't be crossed.",tags:["positioning","differentiation","moat"]}],Y=["ALL","DIAGNOSIS","STRATEGY","EXECUTION","REFRAME","THINKING","POSITIONING"],U=["ALL PRINCIPLES","PERCEPTUAL ASYMMETRY","IRREPLACEABILITY","SUPER-SYNTHESIS","INFINITE LEVERAGE","VALUE MULTIPLICATION","GUARANTEED UPSIDE","CONSTRAINT INVERSION"];function J(){let[e,i]=(0,c.useState)(""),[d,p]=(0,c.useState)("ALL"),[m,y]=(0,c.useState)("ALL PRINCIPLES"),[g,x]=(0,c.useState)(!1),f=W.filter(t=>{let s=t.title.toLowerCase().includes(e.toLowerCase())||t.prompt.toLowerCase().includes(e.toLowerCase()),a="ALL"===d||t.category===d,i="ALL PRINCIPLES"===m||t.principle===m,o=!g||t.isGeniusExtraction;return s&&a&&i&&o});return(0,t.jsxs)("main",{className:"min-h-screen",children:[(0,t.jsx)(u.default,{}),(0,t.jsx)("section",{className:"pt-24 pb-12 px-6",children:(0,t.jsx)("div",{className:"max-w-7xl mx-auto",children:(0,t.jsxs)(s.motion.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,t.jsx)("span",{className:"text-xs font-mono text-teal tracking-[0.3em]",children:"THE LIBRARY"}),(0,t.jsxs)("h1",{className:"mt-3 font-[family-name:var(--font-monument)] text-4xl sm:text-5xl lg:text-6xl tracking-tight",children:["PROMPT",(0,t.jsx)("br",{}),(0,t.jsx)("span",{className:"text-slate",children:"REPOSITORY"})]}),(0,t.jsx)("p",{className:"mt-6 text-slate max-w-2xl text-lg",children:"Genius Extractions™ and strategic prompts built from 500 million words of Jay Abraham's thinking. Each one designed to shift how you see your business."})]})})}),(0,t.jsx)("section",{className:"py-12 px-6 border-y border-white/5 bg-gradient-to-b from-teal/5 to-transparent",children:(0,t.jsxs)("div",{className:"max-w-7xl mx-auto",children:[(0,t.jsxs)(s.motion.div,{initial:{opacity:0},animate:{opacity:1},transition:{delay:.2},className:"mb-8",children:[(0,t.jsxs)("div",{className:"flex items-center gap-3 mb-2",children:[(0,t.jsx)(l,{className:"w-5 h-5 text-teal"}),(0,t.jsx)("span",{className:"text-xs font-mono text-teal tracking-[0.3em]",children:"THE SEVEN ORGANIZING PRINCIPLES"})]}),(0,t.jsx)("p",{className:"text-slate",children:"Deep-dive into each principle with dedicated prompts, stories, and frameworks."})]}),(0,t.jsx)("div",{className:"grid sm:grid-cols-2 lg:grid-cols-4 gap-4",children:H.principles.slice(0,4).map((e,a)=>(0,t.jsx)(s.motion.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.1*a},children:(0,t.jsxs)(h.default,{href:`/library/${e.slug}`,className:"oracle-card p-5 rounded-xl block group hover:border-teal/30 transition-colors h-full",children:[(0,t.jsxs)("div",{className:"flex items-center gap-3 mb-3",children:[(0,t.jsx)("span",{className:"w-8 h-8 rounded-full border border-teal/30 bg-teal/5 flex items-center justify-center font-mono text-sm text-teal",children:e.number}),(0,t.jsx)(r.ArrowRight,{className:"w-4 h-4 text-slate opacity-0 group-hover:opacity-100 transition-opacity ml-auto"})]}),(0,t.jsx)("h3",{className:"font-medium text-paper mb-2 group-hover:text-teal transition-colors",children:e.title}),(0,t.jsx)("p",{className:"text-xs text-slate line-clamp-2",children:e.corePrinciple})]})},e.slug))}),(0,t.jsx)("div",{className:"grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4",children:H.principles.slice(4).map((e,a)=>(0,t.jsx)(s.motion.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.1*(a+4)},children:(0,t.jsxs)(h.default,{href:`/library/${e.slug}`,className:"oracle-card p-5 rounded-xl block group hover:border-teal/30 transition-colors h-full",children:[(0,t.jsxs)("div",{className:"flex items-center gap-3 mb-3",children:[(0,t.jsx)("span",{className:"w-8 h-8 rounded-full border border-teal/30 bg-teal/5 flex items-center justify-center font-mono text-sm text-teal",children:e.number}),(0,t.jsx)(r.ArrowRight,{className:"w-4 h-4 text-slate opacity-0 group-hover:opacity-100 transition-opacity ml-auto"})]}),(0,t.jsx)("h3",{className:"font-medium text-paper mb-2 group-hover:text-teal transition-colors",children:e.title}),(0,t.jsx)("p",{className:"text-xs text-slate line-clamp-2",children:e.corePrinciple})]})},e.slug))})]})}),(0,t.jsx)("section",{className:"sticky top-16 z-40 border-y border-white/5 bg-void/90 backdrop-blur-md",children:(0,t.jsxs)("div",{className:"max-w-7xl mx-auto px-6 py-4",children:[(0,t.jsxs)("div",{className:"flex flex-col lg:flex-row gap-4",children:[(0,t.jsxs)("div",{className:"relative flex-1 max-w-md",children:[(0,t.jsx)(a.Search,{className:"absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate"}),(0,t.jsx)("input",{type:"text",placeholder:"Search prompts...",value:e,onChange:e=>i(e.target.value),className:"w-full pl-10 pr-4 py-2.5 bg-white/5 border border-white/10 rounded text-paper placeholder:text-slate/50 focus:outline-none focus:border-teal/50 font-mono text-sm"})]}),(0,t.jsxs)("div",{className:"flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0",children:[(0,t.jsx)(o,{className:"w-4 h-4 text-slate flex-shrink-0"}),Y.map(e=>(0,t.jsx)("button",{onClick:()=>p(e),className:`px-3 py-1.5 text-xs font-mono tracking-wider rounded whitespace-nowrap transition-colors ${d===e?"bg-teal/20 text-teal border border-teal/30":"text-slate border border-white/10 hover:border-white/20"}`,children:e},e))]}),(0,t.jsxs)("button",{onClick:()=>x(!g),className:`flex items-center gap-2 px-3 py-1.5 text-xs font-mono tracking-wider rounded whitespace-nowrap transition-colors ${g?"bg-yellow-500/20 text-yellow-500 border border-yellow-500/30":"text-slate border border-white/10 hover:border-white/20"}`,children:[(0,t.jsx)(n.Sparkles,{className:"w-3 h-3"}),"GENIUS ONLY"]})]}),(0,t.jsxs)("div",{className:"mt-4 flex items-center gap-2 overflow-x-auto pb-2",children:[(0,t.jsx)("span",{className:"text-xs font-mono text-slate/50 flex-shrink-0",children:"PRINCIPLE:"}),U.map(e=>(0,t.jsx)("button",{onClick:()=>y(e),className:`px-2.5 py-1 text-[10px] font-mono tracking-wider rounded whitespace-nowrap transition-colors ${m===e?"bg-white/10 text-paper":"text-slate/60 hover:text-slate"}`,children:e},e))]})]})}),(0,t.jsx)("section",{className:"py-12 px-6",children:(0,t.jsxs)("div",{className:"max-w-7xl mx-auto",children:[(0,t.jsxs)("div",{className:"mb-6 text-sm font-mono text-slate",children:[(0,t.jsx)("span",{className:"text-teal",children:f.length})," ",1===f.length?"prompt":"prompts"," found"]}),(0,t.jsx)(G,{children:f.map(e=>(0,t.jsx)(O,{title:e.title,category:e.category,principle:e.principle,prompt:e.prompt,description:e.description,tags:e.tags,isGeniusExtraction:e.isGeniusExtraction,jayiUrl:e.jayiUrl},e.id))}),0===f.length&&(0,t.jsxs)("div",{className:"text-center py-20",children:[(0,t.jsx)("div",{className:"text-slate",children:"No prompts match your filters."}),(0,t.jsx)("button",{onClick:()=>{i(""),p("ALL"),y("ALL PRINCIPLES"),x(!1)},className:"mt-4 text-teal text-sm font-mono hover:underline",children:"Clear all filters"})]})]})})]})}e.s(["default",()=>J],14886)}]);

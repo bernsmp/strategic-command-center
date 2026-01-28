@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ============================================
+   STRATEGIC COMMAND CENTER - ORACLE AESTHETIC
+   ============================================ */
+
+:root {
+  /* Core Colors */
+  --color-void: #000000;
+  --color-paper: #F5F5F5;
+  --color-slate: #707070;
+  --color-teal: #0D7377;
+  --color-teal-dark: #0A5C5F;
+  --color-teal-glow: rgba(13, 115, 119, 0.4);
+
+  /* Typography Scale */
+  --font-display: var(--font-monument), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", monospace;
+
+  /* Spacing */
+  --space-unit: 8px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-medium: 300ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-teal);
+  color: var(--color-paper);
+}
+
+/* Oracle Typography */
+.font-oracle {
+  font-family: var(--font-display);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.font-terminal {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+/* Scan Line Effect */
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-teal),
+    var(--color-teal-glow),
+    var(--color-teal),
+    transparent
+  );
+  animation: scanLine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scanLine {
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* Decode Effect */
+.decode-text {
+  animation: decodeText 0.8s ease-out forwards;
+}
+
+@keyframes decodeText {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Terminal Cursor */
+.terminal-cursor::after {
+  content: "▊";
+  animation: terminalBlink 1s step-end infinite;
+  color: var(--color-teal);
+  margin-left: 2px;
+}
+
+@keyframes terminalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Glow Effects */
+.glow-teal {
+  box-shadow: 0 0 20px var(--color-teal-glow),
+              0 0 40px rgba(13, 115, 119, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px var(--color-teal-glow),
+               0 0 20px rgba(13, 115, 119, 0.3);
+}
+
+/* Grid Overlay (subtle) */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Card Styles */
+.oracle-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-medium);
+}
+
+.oracle-card:hover {
+  border-color: rgba(13, 115, 119, 0.4);
+  box-shadow: 0 0 30px rgba(13, 115, 119, 0.1);
+}
+
+/* Action Terminal Button */
+.action-terminal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-slate);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.action-terminal:hover {
+  border-color: var(--color-teal);
+  color: var(--color-paper);
+  background: rgba(13, 115, 119, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Utility Classes */
+.border-oracle {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.text-slate {
+  color: var(--color-slate);
+}
+
+.bg-void {
+  background-color: var(--color-void);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
