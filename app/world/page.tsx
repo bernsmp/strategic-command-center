@@ -128,6 +128,10 @@ export default function WorldPage() {
         .sw-root .sw-topcta{background:var(--sw-accent);color:#000;}
         .sw-root .sw-route__label{background:color-mix(in srgb,#000 72%,transparent);color:var(--sw-ink);border-color:rgba(255,255,255,0.14);}
         .sw-root .sw-copy__tags li{background:color-mix(in srgb,var(--sw-accent) 16%,#000);color:color-mix(in srgb,var(--sw-accent) 78%,#fff);border-color:color-mix(in srgb,var(--sw-accent) 40%,transparent);}
+        .sw-root .sw-brand__mark{background:url('/images/decoding-genius-logo.png') center/contain no-repeat;border-radius:0;box-shadow:none;width:30px;height:34px;}
+        .sw-root .sw-brand__name{font-family:var(--font-jetbrains),monospace;font-size:.78rem;letter-spacing:.18em;}
+        .sw-root .sw-btn{font-family:var(--font-jetbrains),monospace;letter-spacing:.1em;font-size:.85rem;}
+        .sw-root .sw-copy__eyebrow{font-family:var(--font-jetbrains),monospace;letter-spacing:.25em;}
       `}</style>
       <div
         ref={containerRef}
@@ -137,8 +141,8 @@ export default function WorldPage() {
             "--sw-ink": "#F5F5F5",
             "--sw-ink-soft": "rgba(245,245,245,0.55)",
             "--sw-accent": GOLD,
-            "--sw-font-display": "var(--font-mono, 'JetBrains Mono', monospace)",
-            "--sw-font-body": "var(--font-sans, Inter, sans-serif)",
+            "--sw-font-display": "var(--font-jetbrains), monospace",
+            "--sw-font-body": "var(--font-inter), sans-serif",
           } as React.CSSProperties
         }
       />
