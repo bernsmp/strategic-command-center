@@ -2,12 +2,12 @@
 
 Work order from Max: commit + push everything, generate a few Compass-HQ-style hero video versions for this site via Higgsfield, then build the scroll-world (per `/Users/maxb/Documents/skills/50 - Skill Systems/Creative Elements/skills/scroll-world/SKILL.md`) even if it doesn't get presented. Finish so it's reviewable in the morning.
 
-- [ ] O1. Commit pending changes, push main to origin, verify the push landed (git log origin/main)
-- [ ] O2. Higgsfield preflight: MCP balance + model pick; CLI presence for the scroll-world pipeline (fall back to MCP tools if CLI unauthenticated)
-- [ ] O3. Hero videos: 3 GENUINELY DIFFERENT scenes (locked style: deep black, grayscale + gold glow, NO text baked in), each a looping interior-of-the-mind video for the Portal/floor-plan hero. Save to public/videos/hero/ + posters
-- [ ] O4. Scroll world: 5 scenes (the Book in the void → Entrance Hall with seven doors → Room 01 Hidden Asset Auditor → Room 05 Backend Architect → The Last Door), 5 dive-in clips + 4 connectors with frame-identical seams, scrub engine at /world (standalone page; Portal untouched until blessed)
-- [ ] O5. Integrate, next build, verify routes + visual pass, screenshots for morning review
-- [ ] O6. Final commit + push; morning review note at docs/MORNING-REVIEW-2026-07-13.md; Builder Brain session capture
+- [x] O1. Commit pending changes, push main to origin, verify the push landed (git log origin/main)
+- [x] O2. Higgsfield preflight: MCP balance + model pick; CLI presence for the scroll-world pipeline (fall back to MCP tools if CLI unauthenticated)
+- [x] O3. Hero videos: 3 GENUINELY DIFFERENT scenes (locked style: deep black, grayscale + gold glow, NO text baked in), each a looping interior-of-the-mind video for the Portal/floor-plan hero. Save to public/videos/hero/ + posters
+- [x] O4. Scroll world: 5 scenes (the Book in the void → Entrance Hall with seven doors → Room 01 Hidden Asset Auditor → Room 05 Backend Architect → The Last Door), 5 dive-in clips + 4 connectors with frame-identical seams, scrub engine at /world (standalone page; Portal untouched until blessed)
+- [x] O5. Integrate, next build, verify routes + visual pass, screenshots for morning review
+- [x] O6. Final commit + push; morning review note at docs/MORNING-REVIEW-2026-07-13.md; Builder Brain session capture
 
 Decisions made without waking Max (flag for review): scroll world scoped to 5 scenes (seam quality over scene count, per the skill's own warning); it ships at /world as an experience preview, not replacing the Portal; hero style follows the locked jAI black+gold rules; if Higgsfield credits or model access block a step, the blocker gets documented in the morning note instead of a silent skip.
 
