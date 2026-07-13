@@ -17,7 +17,7 @@
 
 ## Track 3: The world layer proper
 
-- **Coach avatars.** Design the visual identity for the seven Billion Dollar Coaches plus Jay as master coach. Michelle's principle: the avatar is what connects the imagineering to the human. Decision needed first **(call decision)**: are the avatars Jay's stylized likeness in seven variations ("Jay in a different color jacket," which needs Jay's team's sign-off on likeness use), or seven distinct emblems/figures in the locked black-and-gold style with Jay's likeness reserved for the master coach? Once decided, generate per-coach avatars for room heroes, coach cards, and the floor plan.
+- **Coach avatars.** Design the visual identity for the seven Billion Dollar Coaches plus Jay as master coach. Michelle's principle: the avatar is what connects the imagineering to the human. **DECIDED (Michelle Abraham, on the 2026-07-13 three-way call, per Max): Jay's stylized likeness is approved.** Direction: Jay in a different color jacket per coach, locked black-and-gold treatment. Reference material exists (the jay-mirror repo carries a Jay image pack from April). Generate per-coach avatars for room heroes, coach cards, and the floor plan.
 - Bless or retire /world as the site's front door; wire the winning hero video from /hero-preview into the Portal.
 - Attractions and showrooms: content experiences organized as attractions, tools grouped into showrooms per room, per Michelle's federated model. Spec sources: the Roger Rabbit user-journey doc and the Compass HQ curriculum (Max owes Michelle both).
 - Session export productized: every coach already ends a session with a markdown summary; make it a one-click download so readers leave each room with something in their hands.
