@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Terminal, ChevronRight, Copy, Check, ClipboardCopy, FolderCog, FileCode2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import GatedPrompt, { TicketGateProvider } from "@/components/GatedPrompt";
 import Navigation from "@/components/Navigation";
+import { recordEvent } from "@/lib/gate";
 import { principles, masterCoach } from "@/lib/principles";
 
 // Typewriter effect component
@@ -180,6 +182,7 @@ function PromptModule({
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(prompt);
+    recordEvent("copy", title);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -252,31 +255,36 @@ function PromptModule({
                 </span>
               </div>
 
-              {/* Prompt content */}
-              <div className="bg-white/5 border border-white/10 p-4 font-mono text-xs text-white/70 leading-relaxed whitespace-pre-wrap">
-                {prompt}
-              </div>
-
-              {/* Copy button */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCopy();
-                }}
-                className="mt-4 flex items-center gap-2 text-xs font-mono text-white/50 hover:text-white transition-colors"
+              <GatedPrompt
+                where={`library:archive:${title}`}
+                lockedClassName="min-h-[120px]"
               >
-                {copied ? (
-                  <>
-                    <Check className="w-3 h-3" />
-                    COPIED TO CLIPBOARD
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3 h-3" />
-                    COPY PROMPT
-                  </>
-                )}
-              </button>
+                {/* Prompt content */}
+                <div className="bg-white/5 border border-white/10 p-4 font-mono text-xs text-white/70 leading-relaxed whitespace-pre-wrap">
+                  {prompt}
+                </div>
+
+                {/* Copy button */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCopy();
+                  }}
+                  className="mt-4 flex items-center gap-2 text-xs font-mono text-white/50 hover:text-white transition-colors"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-3 h-3" />
+                      COPIED TO CLIPBOARD
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3 h-3" />
+                      COPY PROMPT
+                    </>
+                  )}
+                </button>
+              </GatedPrompt>
             </div>
           </motion.div>
         )}
@@ -292,12 +300,16 @@ function MasterCoachPrompt() {
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(masterCoach.prompt.content);
+    recordEvent("copy", "master-coach");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <div>
+    <GatedPrompt
+      where="library:master-coach"
+      lockedClassName="min-h-[84px]"
+    >
       <div className="flex flex-wrap gap-3">
         <button
           onClick={handleCopy}
@@ -342,7 +354,7 @@ function MasterCoachPrompt() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </GatedPrompt>
   );
 }
 
@@ -499,6 +511,7 @@ export default function LibraryPage() {
   });
 
   return (
+    <TicketGateProvider>
     <main className="min-h-screen bg-black">
       <Navigation />
 
@@ -793,5 +806,6 @@ export default function LibraryPage() {
       {/* Footer spacer */}
       <div className="h-20" />
     </main>
+    </TicketGateProvider>
   );
 }

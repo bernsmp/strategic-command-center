@@ -18,6 +18,8 @@ import {
   Terminal,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import GatedPrompt, { TicketGateProvider } from "@/components/GatedPrompt";
+import { recordEvent } from "@/lib/gate";
 import { getPrincipleBySlug, principles } from "@/lib/principles";
 
 // Chapter-specific images mapping
@@ -241,14 +243,17 @@ function AnimatedNetworkImage({ src, opacity = 0.2 }: { src: string; opacity?: n
 function ActionTerminal({
   label,
   prompt,
+  detail,
 }: {
   label: string;
   prompt: string;
+  detail: string;
 }) {
   const [copied, setCopied] = useState(false);
 
   const handleClick = async () => {
     await navigator.clipboard.writeText(prompt);
+    recordEvent("copy", detail);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -418,6 +423,7 @@ export default function PrinciplePage({
     currentIndex < principles.length - 1 ? principles[currentIndex + 1] : null;
 
   return (
+    <TicketGateProvider>
     <main className="min-h-screen bg-black">
       <Navigation />
 
@@ -834,9 +840,11 @@ export default function PrinciplePage({
 
             {/* Prompt Content */}
             <div className="p-6 bg-white/[0.02]">
-              <pre className="font-mono text-sm text-white/60 whitespace-pre-wrap leading-relaxed">
-                {principle.prompt.content}
-              </pre>
+              <GatedPrompt where={`library/${principle.slug}:prompt`}>
+                <pre className="font-mono text-sm text-white/60 whitespace-pre-wrap leading-relaxed">
+                  {principle.prompt.content}
+                </pre>
+              </GatedPrompt>
             </div>
 
             {/* Action Terminals */}
@@ -846,20 +854,27 @@ export default function PrinciplePage({
                   COPY TO:
                 </span>
               </div>
-              <div className="flex flex-wrap gap-3">
+              <GatedPrompt
+                where={`library/${principle.slug}:actions`}
+                contentClassName="flex flex-wrap gap-3"
+                lockedClassName="min-h-[76px]"
+              >
                 <ActionTerminal
                   label="CLAUDE"
                   prompt={principle.prompt.content}
+                  detail={principle.coach.name}
                 />
                 <ActionTerminal
                   label="CHATGPT"
                   prompt={principle.prompt.content}
+                  detail={principle.coach.name}
                 />
                 <ActionTerminal
                   label="JAY-I"
                   prompt={principle.prompt.content}
+                  detail={principle.coach.name}
                 />
-              </div>
+              </GatedPrompt>
             </div>
           </motion.div>
         </div>
@@ -928,5 +943,6 @@ export default function PrinciplePage({
         </div>
       </section>
     </main>
+    </TicketGateProvider>
   );
 }
