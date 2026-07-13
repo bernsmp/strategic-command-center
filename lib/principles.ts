@@ -186,11 +186,63 @@ Start now: ask me the four-angle question, then have me describe my business in 
     roomTeaser: "Where comparison stops being possible.",
     jayQuote: "It's not about being louder. It's about being indispensable. It's about becoming the only logical choice in your market.",
     corePrinciple: "Position your business so they can only choose you.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `Most business owners hear about a competitor's move and immediately ask how to fight back. Match the price. Sharpen the pitch. Outspend the sign.
+
+Jay never asks those questions. He asks one that sounds almost naive: "Why are we fighting on their terms?"
+
+Normal thinking asks: given that we're being compared, how do we compare favorably? Jay asks: why are we being compared at all? What would make comparison impossible?
+
+Not better. Not different. Incomparable.
+
+In his words: "The goal isn't to win the game. The goal is to be playing a different game entirely." A game where you're the only player.`,
+    keyInsight: "When you're one of many, you're a commodity, and nobody compares commodities on quality, trust, or who cares more. They compare on price. A Category of One flips that: when someone shops around for what you do, you become the only viable choice. Not the best option. The only option that makes sense.",
+    stories: [
+      {
+        title: "The Counter the Discount Couldn't Reach",
+        hook: "The category lived at twenty dollars. The competitor went to twelve.",
+        story: `One January morning, a competitor down the highway dropped one of the store's highest-volume cigarette brands far below the usual retail price. The category normally lived around twenty dollars. The numbers coming back were closer to twelve or fifteen, and that kind of spread moves people down the highway.
+
+The obvious move was to match. The owner didn't have to, because for years he had been building things around that counter that never showed up on a price sign. A coupon program with point-back tracking, so he knew which partner business sent which customer. Host-beneficiary deals with other businesses on the highway. Special pricing for longtime customers. Surprise packs on older inventory.
+
+By the time the discount landed, his customers were not comparing two numbers on two signs. They were standing inside a relationship built one coupon, one case price, one small promise at a time.
+
+The discount had nowhere clean to land.`,
+        lesson: "He didn't need to win the price sign. He needed to make the price sign matter less.",
+      },
+      {
+        title: "The Agency That Refused to Pitch",
+        hook: "Every other agency brought their best work. The underdog brought a diagnosis.",
+        story: `An underdog agency walked into a marketing RFP where every competitor was about to present a hundred-page deck and a reel of award-winning campaigns.
+
+They opened with a reframe: "What you're about to see is completely different from what you're expecting. We're not going to show you our best creative work. Because we don't think your problem is a creative problem."
+
+Then they named what they believed the client's actual problem was.
+
+Every agency that walked in with a beautiful campaign reel had just stepped on a landmine. They looked like vendors showing off how great they were. The underdog looked like the only one who understood what the client needed.
+
+They won the business as a massive underdog, because they showed up as a fiduciary: diagnosing, not pitching.`,
+        lesson: "Vendors get compared and swapped on spreadsheet logic. A partner who is visibly more committed to the outcome than to looking impressive doesn't get compared at all.",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "The Comparison Test",
+        question: "Can a reasonable prospect line you up side-by-side with two competitors and feel like they're comparing similar things? If yes, you're still in the commodity bucket, no matter how good you are.",
+      },
+      {
+        area: "The Explanation Test",
+        question: "Do you have a speech you give when people ask what you do differently? If yes, it's not clear enough. True category-of-one positioning is obvious without a TED Talk.",
+      },
+      {
+        area: "The Switching Test",
+        question: "Would a happy customer leave you for someone 20% cheaper who claims to do basically the same thing? If yes, you're respected, maybe even liked, but replaceable when the budget gets tight.",
+      },
+    ],
+    howAiFitsIn: `You've done it a hundred times. You look at someone else's business, a competitor, a friend's company, a brand you buy from, and you immediately spot what they're missing. The obvious price increase. The category they should own instead of the one they're stuck in.
+
+Everyone can diagnose the plays from the bleachers. But when it's your business, you're playing the game. And nobody coaches themselves to a championship.
+
+Bring your blind-spot notes from Room 1, plus what clients or customers say is different about working with you. This room's coach looks at your business from the outside and shows you where the things you're investing in are keeping you comparable, instead of making you irreplaceable.`,
     prompt: {
       title: "The Preeminence Architect",
       description: "Your Chapter 2 coach. Moves you from commodity to category of one, so the competitor's $200K sign stops mattering.",
@@ -322,11 +374,63 @@ Start now: ask me for my industry and my specific challenge.`,
     roomTeaser: "Where effort starts compounding instead of adding.",
     jayQuote: "Why do something once when you can do it once and benefit forever?",
     corePrinciple: "Structure your business so effort compounds rather than adds.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `Most business owners ask: how can I get more customers? Jay asks: how do I make the customers I already have worth ten times more? One question leads to addition. The other leads to multiplication.
+
+The pattern repeats everywhere. You think: create more content, post more, publish more. Jay thinks: make one piece work ten different ways. You think: find more partners, pitch more people. Jay thinks: structure one partnership for multiple revenue streams.
+
+The math is the whole argument. Ten hours of work is ten units of output. Ten hours building a system that runs ten times is a hundred. The same system licensed to ten partners is a thousand. The work doesn't scale. The leverage scales.
+
+Jay has a phrase for it: "Small hinges swing big doors."`,
+    keyInsight: "There are only so many hours in your day and only so many customers you can personally serve. At some point the only way to grow by addition is to work more. Addition has a ceiling. Multiplication has none.",
+    stories: [
+      {
+        title: "One Million Dollars for 48 Hours of Work",
+        hook: "Two hours of work a month. A $35,000 to $50,000 check.",
+        story: `Jay's Japanese partner runs a subscription business: 4,000 members at $100 per month. The partner handles everything. Translation, hosting, marketing, customer service, payment processing.
+
+Jay's role: approve content. Two hours per month.
+
+Jay's share: 20% of gross, between $35,000 and $50,000 per month. The deal has run for over two years. Roughly $1 million for 48 hours of work.
+
+Why only 20% when Jay created all the content? "Because the other guy does all the work," Jay said. "I want to get paid while someone else runs a business in Japan using my stuff. Twenty percent of something is infinitely better than one hundred percent of nothing."
+
+If the partner makes nothing, Jay makes nothing. If the partner grows, Jay's check grows with it. Zero risk. Zero operational burden. The intellectual property stays his.`,
+        lesson: "Most people would have tried to build a business in Japan. Jay found someone who'd already built one and plugged in.",
+      },
+      {
+        title: "The Consultant Who Stopped Trading Hours for Dollars",
+        hook: "Same diagnostic. Same methodology. Three new revenue streams.",
+        story: `A strategy consultant came to one of Jay's workshops charging $8,500 per engagement, working with 15 to 20 clients a year, maxed out around $170,000. She had spent six years refining a diagnostic for operational bottlenecks. It worked reliably. And she delivered it the same way every time: show up, run the diagnostic, write the report, present findings. One client, one fee, repeat.
+
+Jay asked her one question: "Who else needs this diagnostic but can't afford you?"
+
+She'd never thought about it. Her clients were mid-sized manufacturers, but the diagnostic would work for smaller operations too. They just couldn't pay $8,500.
+
+So she licensed the framework to three business coaches who served smaller manufacturers, at $2,000 per client they ran through the system, with referrals flowing back when clients outgrew the coaches.
+
+Within 18 months, the licensing generated more than her direct consulting. And she was working fewer hours.`,
+        lesson: "She didn't build anything new. She found a different way to deliver what clients already paid her for.",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "What You've Already Built",
+        question: "What have you created that you're only using once? The workshop you delivered three times and filed away. The framework you explain on every call. The process that exists only in your head. You've already done the work; the question is whether you're getting paid once or repeatedly.",
+      },
+      {
+        area: "Who Has Your Customers",
+        question: "Who already has your ideal customers' attention but doesn't compete with you? You probably know. You've had the coffee and exchanged the cards. Most people don't get stuck on the who. They get stuck on the how.",
+      },
+      {
+        area: "The Small Hinge",
+        question: "What's the one structural change that makes everything else move? More outreach and more hours feel like progress. The hinge is different: a revenue share instead of a fee, a license instead of a delivery, one asset doing double duty.",
+      },
+    ],
+    howAiFitsIn: `AI can look at your business the way a $250K-a-year consultant would. Fresh eyes. No assumptions. No emotional attachment to how things currently work. But you can't expect even that consultant to find your leverage without the full picture.
+
+So give this coach context first: what you do, who you serve, what you've built, what you've tried, what hasn't worked. Then run the leverage questions against your real numbers.
+
+And when you get an answer, don't accept it. Challenge it: what's wrong with this approach, what am I missing, why would this fail? Jay treats the first response as the opening of a negotiation, not the closing of a conversation. Do the same here. Depth creates insight. Breadth creates another document you'll never open again.`,
     prompt: {
       title: "The Leverage Multiplier",
       description: "Your Chapter 4 coach. Addition has a ceiling. This coach finds where your effort can compound: geometry instead of arithmetic.",
@@ -368,11 +472,57 @@ Start now: ask me the four-angle question, then have me describe my business and
     roomTeaser: "Where the customers you have become worth ten times more.",
     jayQuote: "The customers you already have are worth ten times what you're getting from them.",
     corePrinciple: "The people already inside the door are the real opportunity.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `Most people think about business as a series of transactions. Jay thinks about it as a portfolio of relationships. Transactions end. Relationships compound.
+
+Most businesses design their revenue model around the first transaction. Get someone in the door, close the sale, scramble for the next customer. Every dollar of growth requires a fresh dollar of acquisition. You're always hunting. Always filling the pipeline. Always wondering if next month will be feast or famine.
+
+Jay designs businesses with backend architecture instead: map the full sequence of what a customer could buy from you over years, then build everything else to feed that sequence. Every single decision changes when you know what a customer is worth over time.`,
+    keyInsight: "Right now, most of your customers buy once or twice and drift away. Not because they're unhappy. Because nobody gave them a reason to stay. You didn't do anything wrong. You just didn't do anything at all.",
+    stories: [
+      {
+        title: "The 13X Customer",
+        hook: "Same store. Same staff. Thirteen times the revenue.",
+        story: `A retail vape section was doing $60,000 a month. Roughly a year later it was doing $780,000. Same location. Same square footage. Same manager who'd been there three years.
+
+The first instinct was external: something viral, a competitor closing. The data said otherwise. The real shift was what each customer was worth. Buying more. Coming back more often. Bringing their friends.
+
+The engine was a referral program: a $20 account credit for creating a profile, plus 1% back to the referrer every time that customer purchased, reinforced by automatic text sequences. Jay's additions: verification so the credit couldn't be gamed, contests with prizes worth talking about, and a push to make winners public so the referral value felt real.
+
+Customers stopped being just customers. They had skin in the game. The store had accidentally built a retention mechanism that had nothing to do with its products.`,
+        lesson: "The growth didn't come from more customers. It came from finally asking what the existing ones were worth.",
+      },
+      {
+        title: "Icy Hot and the Math Nobody Does",
+        hook: "Jay gave away the entire front-end and built a brand on the back.",
+        story: `Early in his career, Jay was young, broke, and marketing Icy Hot, the muscle pain reliever. No budget. No relationships. "I was a hungry animal," Jay said. "I was on the phone, sending stuff out, all day long. I didn't care about the size of the deal. All I cared about was building critical mass as quickly as I could."
+
+He contacted every radio station, television station, and publication with an audience that might use the product. Not the big ones first. All of them. The offers were aggressive. Sometimes he gave away the entire front-end revenue just to get distribution, or lost money on the first transaction.
+
+It worked because of math most owners never calculate: the Allowable Acquisition Cost. If a customer spends $10,000 with you over five years at a 40% margin, their lifetime value is $4,000 in profit. You know your ceiling. You're not guessing.
+
+Icy Hot became a brand generating tens of millions in backend revenue.`,
+        lesson: "Competitors measuring first-purchase profit called it insane. Measured across five years, it was the smartest investment he could have made.",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "After the First Sale",
+        question: "What do your customers need after the first engagement? A tree trimmer's clients only called when branches got unruly. Jay moved them to automatic quarterly service: 70% converted within three months, profit quadrupled, and the advertising budget disappeared.",
+      },
+      {
+        area: "Alongside the First Sale",
+        question: "What does the customer already in front of you need right now that you're not offering? A Texas doctor put signs in his waiting room, restrooms, and payment counter: flu shots, $19 today. One in three patients said yes. $5,000 a month without a single new patient.",
+      },
+      {
+        area: "The Asset Collecting Dust",
+        question: "What would people pay for that's sitting idle in your business? A newsletter publisher lost money on every mailing until Jay showed him the subscribers were the asset. Four investment companies paid hundreds of thousands to reach them.",
+      },
+    ],
+    howAiFitsIn: `Most business owners know their acquisition cost down to the penny. What a click costs, what a lead costs, what a conversion costs. Ask what a customer is worth over five years and you get a blank stare.
+
+That blind spot is expensive. If you don't know what a customer is actually worth, you can't calculate what you can afford to spend to acquire one. You can't design a backend. You're guessing.
+
+AI can calculate it in minutes, but you have to give it your actual numbers, not your assumptions. Tell this coach about your five best customers: what they bought first, what they bought after, how long they've stayed, what they've asked for that you don't offer. Context is the difference between advice you file away and insight you can act on.`,
     prompt: {
       title: "The Backend Architect",
       description: "Your Chapter 5 coach. You've been told growth means more customers. This coach multiplies the value of the ones already inside the door.",
@@ -414,11 +564,61 @@ Start now: ask me the four-angle question, then have me describe my business and
     roomTeaser: "Where risk stops being the reason.",
     jayQuote: "When you take away the risk, you take away the reason to say no.",
     corePrinciple: "Structure offers so the customer has nothing to lose and everything to gain.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `In 1670, Blaise Pascal posed history's most famous wager. His argument wasn't about probability. It was about structure. Design the bet correctly and you cannot lose. The downside is trivial. The upside is infinite. The rational move is obvious regardless of the odds.
+
+Most people read Pascal's Wager as philosophy. Jay lives it as deal design.
+
+Watch Jay respond to a nervous founder describing a new market, a new product, an untested partnership, and you notice something strange. He doesn't manage risk or tolerate it. He engineers it out.
+
+In his words: "Most people think risk is the price of growth. I think risk is a design flaw. If you're carrying risk, it means you haven't structured the deal correctly."`,
+    keyInsight: "Most people face major decisions as binary gambles: launch or don't, invest or hold back. That framing is the trap. Stop asking whether the idea is worth the risk. Start asking how to structure it so the worst outcome is still a win.",
+    stories: [
+      {
+        title: "$376,000 Worth of Patience",
+        hook: "The bottleneck was one programmer. The workaround was two kiosks.",
+        story: `A European food company owned forty-five locations selling Hawaiian poke bowls. Some stores thrived, others scraped by, and nobody could say why, because every price change and every experiment had to crawl through the one programmer who controlled the kiosk ordering system. Requests took months. By the time a test was approved, the season had changed.
+
+"They were hemorrhaging money," Jay said. "Every month they waited to test something it was costing them roughly $47,000 they weren't capturing. And they'd been waiting for eight months. Which is $376,000 worth of patience."
+
+Jay's suggestion: why be hostage to your tech company just because they're slow? Set up a separate kiosk in two or three stores. Let someone else program it. Run tests independently for two months. Then force the main system to implement the winners.
+
+Within weeks they were testing price points, bundles, and promotions that would have taken six months through the official channel.`,
+        lesson: "The instinct is to fight the bottleneck: push the vendor, force the issue. Jay's move is different. The wall has edges. Walk around it.",
+      },
+      {
+        title: "We Goofed",
+        hook: "A two-word headline cleared $400,000 of dead inventory in a weekend.",
+        story: `A clothing retailer was sitting on $150,000 wholesale worth of conservative men's suits. Fashion had shifted. Nobody wanted them. The inventory was dead weight heading for a write-off.
+
+Jay wrote a two-word headline: "We Goofed."
+
+The ad told the truth. The retailer had over-purchased. He was embarrassed. He knew the clothes were out of style. But for men who preferred traditional cuts, and there were plenty, this was the deal of a decade. Below-wholesale pricing. First come, first served.
+
+The ad ran for two days. They sold everything but five garments. $400,000 in retail value, cleared in a weekend.
+
+Nothing about the financial risk changed. Jay changed how the retailer talked about it. Instead of hiding the mistake, he made it the selling proposition.`,
+        lesson: "The worst outcome, public embarrassment, became the mechanism for the best outcome. Sometimes the only guarantee you can offer is the truth.",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "The Untested Assumption",
+        question: "What are you assuming about your next initiative that you could test with a conversation instead of an investment? 'Customers need to see the finished product' usually means 'I haven't asked them yet.'",
+      },
+      {
+        area: "The Pre-Sell",
+        question: "What could you pre-sell before you build? Ask the people who would actually have to buy the thing. If they lean in, you have validation before the build. If they say no, you learned for free.",
+      },
+      {
+        area: "The Small Experiment",
+        question: "What full-scale commitment are you agonizing over that could be a two-week pilot instead? The poke bowl company skipped the full overhaul. Two test kiosks, two stores, two months gave them everything they needed.",
+      },
+    ],
+    howAiFitsIn: `You already know what you should test. Raise the prices. Launch the service. Approach the partner. You've been thinking about it for weeks, and you haven't done it because the downside feels heavier than the upside.
+
+That's where this coach earns its keep. Point it at the specific thing you're afraid of. Not "I want to grow my business." Specific: "I've been wanting to raise my prices by 30% but I'm afraid I'll lose my three best customers." The more specific the fear, the sharper the response.
+
+Then have it decompose the risk. What are you actually afraid of? Losing revenue, losing relationships, looking foolish? Each fear is a separate assumption, and each assumption can be tested independently. The goal is to turn one scary bet into three small experiments.`,
     prompt: {
       title: "The Risk Reversal Engineer",
       description: "Your Chapter 6 coach. Eight months of polishing the deck is not strategy, it's fear. This coach engineers the offer so risk stops being the reason.",
@@ -460,11 +660,59 @@ Start now: ask me the four-angle question, then have me describe my offer and th
     roomTeaser: "Where the thing you apologize for becomes the moat.",
     jayQuote: "Your biggest constraint isn't holding you back. Your perception of it is.",
     corePrinciple: "Transform limitations into your greatest competitive advantages.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `Most consultants hear about constraints and start problem-solving. Limited budget? Find efficiencies. Small market? Expand your reach. Perfectly reasonable. Also completely predictable.
+
+Jay doesn't immediately try to remove a limitation. He examines it. Turns it over like an artifact from an archaeological dig. Then he asks the question that changes everything: "What does this constraint make possible that wouldn't be possible without it?"
+
+A small market means you can know every customer personally. A limited budget means every dollar has to prove itself. Geographic isolation means you've built logistics your competitors never needed to develop.
+
+Every constraint creates a corresponding capability. Jay builds the strategy around what the constraint made possible.`,
+    keyInsight: "Your business has constraints you've accepted as permanent. Things you apologize for, mention with a slight wince. But the thing that feels like a limitation might be the source of an advantage nobody can replicate. Most operators stare at their constraint for years and see only the wall. Jay walks in and sees the door embedded in it.",
+    stories: [
+      {
+        title: "The Manufacturer Who Stopped Apologizing",
+        hook: "Too small to compete on price. Too small to copy.",
+        story: `A small manufacturer came to Jay frustrated. They couldn't compete with the big players on price. No production volume, no economies of scale, permanently higher per-unit costs. Every advisor had the same answer: grow, get bigger, and until then, accept smaller margins.
+
+Jay asked a different question: "What can you do because you're small that they can't do because they're big?"
+
+The list wrote itself. Custom runs of 25 to 50 units while the big players enforced strict minimums. Two-week turnarounds against standard eight-week lead times. Specs changeable at 3pm on Thursday with the order still shipping Friday. Every customer known by name instead of account number.
+
+"So you're not a small version of them," Jay said. "You're something different entirely. You're the only option for customers who need custom, fast, and flexible."
+
+Within a year the manufacturer had restructured his entire positioning around speed, customization, and personal service, charging a premium for capabilities the big players couldn't match even if they wanted to.`,
+        lesson: "He'd been apologizing for his size. His size was the entire value proposition. The constraint was the strategy.",
+      },
+      {
+        title: "The Dry Cleaner Who Refused to Grow",
+        hook: "No second location. Three thousand licensees.",
+        story: `A Chicago dry cleaner refused to add locations. Wouldn't expand. By every standard playbook, the geographic ceiling was the problem.
+
+Jay relabeled it as exclusivity. The cleaner's promotional systems worked: his ads, his packages, his sequences. So instead of opening stores, he licensed those systems to cleaners outside his protected radius.
+
+Three thousand cleaners ended up paying him monthly to use his marketing. His refusal to grow physically became a scalable intellectual property business with no overhead and no mops to manage.`,
+        lesson: "He never opened a second location. He didn't need to. The thing that capped his growth became the thing he sold.",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "The Forced Capability",
+        question: "What has your constraint forced you to become good at? What muscles have you built that competitors with easier lives never needed to develop?",
+      },
+      {
+        area: "The Asymmetry Test",
+        question: "Does this constraint affect your competitors too, or just you? If it hits everyone equally, it's not a competitive factor. If you've adapted and they haven't, it might be your biggest advantage.",
+      },
+      {
+        area: "The Disappearance Test",
+        question: "How would your business change if the constraint disappeared tomorrow, both good and bad? The small manufacturer's size was his limitation and his value proposition. Getting big would have made him just another faceless vendor.",
+      },
+    ],
+    howAiFitsIn: `You've spent years developing workarounds for your limitations. Too expensive? You got creative. Too slow? You built processes. Too small? You punched above your weight. Those workarounds are now capabilities, but you don't see them that way. You see "just how we do things."
+
+That's the proximity problem from Room 1, applied to constraints. You're too busy living inside the constraint to notice what it's built.
+
+AI doesn't have that proximity. Give this coach the three things you most often apologize for about your business, and it will ask what each one has forced you to develop that competitors never had to. You'll walk away knowing which limitations to keep fighting and which one to build your entire strategy around.`,
     prompt: {
       title: "The Constraint Inverter",
       description: "Your Chapter 7 coach. You've been apologizing for your business in your head for years. This coach turns the thing you apologize for into the moat.",

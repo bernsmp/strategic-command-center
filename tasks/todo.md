@@ -15,8 +15,11 @@ Goal: fill the five placeholder fields per room in `lib/principles.ts` for chapt
 - [x] R3.2 Draft the five fields in Room 1 register
 - [x] R3.3 Insert into lib/principles.ts, next build, served-page verify
 - [x] R3.3b Codex QC (gpt-5.6-sol high, per Max): FIX FIRST verdict, 5 blockers; fact-precision + length fixes applied; two flags overruled as verbatim-source book voice ("Hughes didn't invent leasing. He imported it." / "Same SKUs..."). Re-built + re-verified.
-- [ ] R3.4 Max register sign-off on Room 3 before batching rooms 2, 4-7
-- [ ] R2, R4, R5, R6, R7 same loop, one commit per room, Codex QC each
+- [x] R3.4 Max sign-off with congruence note ("same language as the book"): book-cadence pass applied to Room 3, then batch proceeded
+- [x] R2, R4, R5, R6, R7 drafted book-language-first (Ch2: cigarette counter + underdog agency; Ch4: Japan deal + consultant licensing; Ch5: 13X counter + Icy Hot AAC; Ch6: poke-bowl $376K + We Goofed; Ch7: small manufacturer + Chicago dry cleaner). Forbidden per audit and skipped: Ch6 gas-station CONT-003, Ch7 reserve/methanol (Tim/legal gate), FedEx/Basch (Ch7 owns it, full version missing), Mike-as-consultant passages. All 7 rooms serve with zero "Coming soon".
+- [x] Codex QC batch of rooms 2,4,5,6,7 (fresh session; NOTE `codex exec resume` rejects -s/-C, gotcha logged to skill): FIX FIRST, 10 findings, all fixed (3 nonverbatim Jay quotes repaired, invented Room 4 hook replaced, Room 7 capability-vs-event fixed, Room 6 pre-sell check re-anchored to chapter opening instead of the forbidden gas-station passage, Room 5 hedges + sign-count + winner-story status fixed, light length trims). Rebuilt + re-verified, all 7 rooms zero placeholders.
+- [x] One-pager updated: all seven rooms complete; decisions list down to Last Door + CRM
+- [ ] Regenerate the walkthrough Google Doc (md is 2 revisions ahead of the Doc; regen = NEW URL, blocked on Max confirming he still hasn't shared https://docs.google.com/document/d/15MG70f-fN_5BzJKuN73v-G7FSy_R9Kvc33r5P8Sd55o/edit)
 - [ ] Regenerate the walkthrough Google Doc after sign-off (md already updated: Rooms 1+3 complete; NOTE regen = new URL, confirm Max hasn't shared the current one)
 
 **Known constraints (from the 2026-07-05 book audit):**

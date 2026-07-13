@@ -37,7 +37,7 @@
 
 - **/ch/3**: what a reader sees after scanning the chapter 3 QR code (a short crossing screen, then Room 3).
 - **/library**: the floor plan with the seven numbered rooms.
-- **Rooms 1 and 3**: complete end to end, walkthrough content and coach.
+- **All seven rooms**: complete end to end, walkthrough content and coaches.
 - **The Ticket Check gate**: the email + proof-of-purchase unlock flow.
 - **/world**: a continuous scroll-through walk of the whole place, from the entrance to a sealed door at the end of the hall. Built overnight as an experiment. It could become the site's front door or stay a demo; I want your read on it.
 - **/hero-preview**: candidate looping video heroes for the homepage.
@@ -46,4 +46,3 @@
 
 1. **What's behind the Last Door.** The site points readers toward something after the book, and we haven't picked it: the clone, Michelle's existing challenges, consulting, or a call with Jay. This is the monetization conversation.
 2. **Where captured emails live.** Go High Level was mentioned but not settled. Until a CRM is connected, the deployed site captures nothing.
-3. **Rooms 2 and 4 through 7 content.** The coaches work; the full room walkthroughs are being written now from the manuscript.
