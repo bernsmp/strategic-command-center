@@ -22,6 +22,6 @@ The crossing at /ch/3. The floor plan with the numbered rooms. Room 1's coach en
 
 ## What I genuinely don't know yet
 
-What's behind the Last Door. The site keeps pointing readers toward something after the book, and we haven't chosen it. The clone, the challenges Michelle already runs, consulting, a call with Jay. That's the monetization conversation. Smaller ones I need answers on. Where the captured emails should live. What Room 4's coach is actually called, since my working name came from the wrong chapter. And rooms 2 through 7 have working coaches but their full walkthroughs aren't written yet.
+What's behind the Last Door. The site keeps pointing readers toward something after the book, and we haven't chosen it. The clone, the challenges Michelle already runs, consulting, a call with Jay. That's the monetization conversation. Smaller ones I need answers on. Where the captured emails should live. And rooms 2 through 7 have working coaches but their full walkthroughs aren't written yet.
 
 The door printed in the book will never move. What's behind it is ours to keep improving forever. That's the whole idea.
