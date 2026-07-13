@@ -118,6 +118,17 @@ export default function WorldPage() {
   return (
     <>
       <Script src="/world/scrub-engine.js" strategy="afterInteractive" onLoad={tryMount} />
+      {/* Dark-theme overrides: the engine hardcodes light-glass pills and
+          ink-filled buttons that assume a light page. Scoped at .sw-root
+          specificity so they beat the injected engine styles. */}
+      <style>{`
+        .sw-root .sw-nav{background:color-mix(in srgb,#000 62%,transparent);border-color:rgba(255,255,255,0.12);}
+        .sw-root .sw-nav__item.is-active{color:#000;}
+        .sw-root .sw-btn--primary{background:var(--sw-accent);color:#000;}
+        .sw-root .sw-topcta{background:var(--sw-accent);color:#000;}
+        .sw-root .sw-route__label{background:color-mix(in srgb,#000 72%,transparent);color:var(--sw-ink);border-color:rgba(255,255,255,0.14);}
+        .sw-root .sw-copy__tags li{background:color-mix(in srgb,var(--sw-accent) 16%,#000);color:color-mix(in srgb,var(--sw-accent) 78%,#fff);border-color:color-mix(in srgb,var(--sw-accent) 40%,transparent);}
+      `}</style>
       <div
         ref={containerRef}
         style={
