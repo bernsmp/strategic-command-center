@@ -1,27 +1,49 @@
-# Why the site is built the way it's built
+# Site Walkthrough: Why It's Built This Way
 
 *For Mike and Michelle, from Max.*
 
-Here's the problem we've been circling for a month. The book mentions JI. JI runs on Delphi. And nobody can promise me what Delphi looks like in six months. Meanwhile the book is done, proofed, and waiting on a software decision that isn't ours to control.
+**What this is:** the book's backend site is built and clickable. This page covers the architecture logic, what works today, and the four decisions I need from you two.
 
-Ink dries. Servers change.
+## The problem it solves
 
-That one sentence is the whole architecture. The book never points at software. It points at a place. Each chapter ends with a QR code, the reader scans it, and they cross over. The printed code never has to change, because everything that might change lives on the other side of the door. If JI is thriving, the site points readers to it. If it isn't, the prompts run in Claude or free ChatGPT and the reader never feels the difference. We stopped betting a printed book on anybody's roadmap, including our own.
+- The book names JI. JI runs on Delphi. Two Delphi deployments have already broken custom instances, and nobody can promise what the platform looks like in six months.
+- The book is done and proofed. It was stuck waiting on a software decision we don't control.
+- The fix: the printed QR codes and URL point at the site, never at software. Everything that can change (which AI, which clone platform, what we sell after the book) lives on the site and can be swapped without touching the book.
+- While JI is healthy, the site routes readers to it. If it degrades or disappears, the same prompts run in Claude or free ChatGPT. The reader never notices.
 
-## What the reader finds on the other side
+## What's on the site
 
-The site is built as a place instead of a webpage. You're inside the mind the book decodes. Seven rooms, one per chapter, laid out on a living map you can watch people walk through. Scan the code at the end of chapter three and you don't hit a homepage. You get a quiet black screen that says you've crossed over, and then Room 03 opens.
+- Seven rooms, one per chapter, shown on a labeled floor-plan map at /library.
+- Each room holds one of the seven Billion Dollar Coaches (the billion dollar naming is Mike's requirement). A coach is a long, engineered prompt in the newsletter style: paste it into any AI and it applies that chapter's thinking to the reader's actual business and numbers. Works in free ChatGPT, Claude, and JI.
 
-Every room is home to one of the seven Billion Dollar Coaches. Mike, that's your billion dollar branding, and it earns its name. A coach is a long, carefully built prompt in the same style as the newsletter prompts. Paste it into any AI and it stops being a chatbot and starts being Jay's thinking applied to that chapter, asking about your real business, in your real numbers. There's also a master coach that routes people. Its first question is where you're standing, first exposure to Jay or twenty years in, and it adjusts everything after that. Michelle, that's your self-selection idea doing the work, and your guided-versus-quick-start paths are built into every room.
+| Chapter | Coach (working names) |
+|---|---|
+| 1 | The Hidden Asset Auditor |
+| 2 | The Preeminence Architect |
+| 3 | The Emissary from Other Worlds |
+| 4 | The Leverage Multiplier |
+| 5 | The Backend Architect |
+| 6 | The Risk Reversal Engineer |
+| 7 | The Constraint Inverter |
 
-The book itself is the ticket. To open the prompts, a reader shows their email plus a receipt or an Amazon order number, once, and every room stays open. Low friction on purpose. The email list is half the point.
+- The master coach is Jay Abraham himself. He routes people: his first question is where the reader stands, first exposure to Jay or twenty years in, and he adjusts from there. The guided vs. quick-start paths inside each room are Michelle's self-selection design.
+
+## The gate
+
+- The book is the ticket. A reader enters their email plus a receipt or Amazon order number once, and every room stays unlocked.
+- Low friction by design. Building the email list is half the point of the site.
 
 ## What you can click today
 
-The crossing at /ch/3. The floor plan with the numbered rooms. Room 1's coach end to end. The ticket gate. And one thing I didn't plan for. At /world, you can scroll and physically walk the whole place in one continuous camera shot, from the dark facade to a sealed door at the end of the hall. I built it overnight to see if it was possible. It might be the front door of this whole thing, or it might stay a beautiful demo. I honestly don't know yet, and I'd rather decide that with you two than alone.
+- **/ch/3**: what a reader sees after scanning the chapter 3 QR code (a short crossing screen, then Room 3).
+- **/library**: the floor plan with the seven numbered rooms.
+- **Room 1**: the Hidden Asset Auditor, complete end to end.
+- **The Ticket Check gate**: the email + proof-of-purchase unlock flow.
+- **/world**: a continuous scroll-through walk of the whole place, from the entrance to a sealed door at the end of the hall. Built overnight as an experiment. It could become the site's front door or stay a demo; I want your read on it.
+- **/hero-preview**: candidate looping video heroes for the homepage.
 
-## What I genuinely don't know yet
+## Decisions I need from you two
 
-What's behind the Last Door. The site keeps pointing readers toward something after the book, and we haven't chosen it. The clone, the challenges Michelle already runs, consulting, a call with Jay. That's the monetization conversation. Smaller ones I need answers on. Where the captured emails should live. And rooms 2 through 7 have working coaches but their full walkthroughs aren't written yet.
-
-The door printed in the book will never move. What's behind it is ours to keep improving forever. That's the whole idea.
+1. **What's behind the Last Door.** The site points readers toward something after the book, and we haven't picked it: the clone, Michelle's existing challenges, consulting, or a call with Jay. This is the monetization conversation.
+2. **Where captured emails live.** Go High Level was mentioned but not settled. Until a CRM is connected, the deployed site captures nothing.
+3. **Rooms 2 through 7 content.** The coaches work; the full room walkthroughs are being written now from the manuscript.
