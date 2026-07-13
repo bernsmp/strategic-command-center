@@ -481,9 +481,28 @@ export default function PrinciplePage({
             <p className="text-[10px] font-mono text-white/40 tracking-[0.2em] mb-4">
               {principle.subtitle}
             </p>
-            <h1 className="font-mono text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white font-light mb-8">
+            <h1 className="font-mono text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white font-light mb-6">
               {principle.title.toUpperCase()}
             </h1>
+
+            {/* Chapter coach identity */}
+            <div className="inline-flex items-center gap-3 border border-white/15 px-4 py-3 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+              <div>
+                <p className="text-[10px] font-mono text-white/40 tracking-[0.25em]">
+                  YOUR BILLION DOLLAR COACH
+                </p>
+                <p className="font-mono text-sm text-white/90 tracking-[0.1em] uppercase">
+                  {principle.coach.name}
+                </p>
+              </div>
+              <a
+                href="#coach"
+                className="ml-4 text-[10px] font-mono text-white/50 tracking-wider border border-white/15 px-3 py-1.5 hover:border-white/40 hover:text-white transition-all"
+              >
+                MEET THEM ↓
+              </a>
+            </div>
           </motion.div>
 
           {/* 1px separator */}
@@ -544,9 +563,65 @@ export default function PrinciplePage({
         </div>
       </section>
 
+      {/* Choose your path */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-8 h-px bg-white/30" />
+              <span className="text-[10px] font-mono text-white/40 tracking-[0.2em]">
+                CHOOSE YOUR PATH
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a
+                href="#coach"
+                className="border border-white/10 p-6 hover:border-white/30 transition-colors group"
+              >
+                <p className="font-mono text-xs text-white/40 tracking-[0.2em] mb-2">QUICK START</p>
+                <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                  Skip straight to your coach. Copy, paste, go.
+                </p>
+              </a>
+              {principle.whatJaySees !== "Coming soon..." ? (
+                <a
+                  href="#guided"
+                  className="border border-white/10 p-6 hover:border-white/30 transition-colors group"
+                >
+                  <p className="font-mono text-xs text-white/40 tracking-[0.2em] mb-2">GUIDED</p>
+                  <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                    Walk the principle first: the stories, the checks, then the coach with your answers in hand.
+                  </p>
+                </a>
+              ) : (
+                <div className="border border-white/5 p-6 opacity-60">
+                  <p className="font-mono text-xs text-white/30 tracking-[0.2em] mb-2">GUIDED · IN PRODUCTION</p>
+                  <p className="text-sm text-white/40 leading-relaxed">
+                    The full chapter walkthrough is being built. The coach below already works.
+                  </p>
+                </div>
+              )}
+              <Link
+                href="/library"
+                className="border border-white/10 p-6 hover:border-white/30 transition-colors group"
+              >
+                <p className="font-mono text-xs text-white/40 tracking-[0.2em] mb-2">BRING A LIVE DECISION</p>
+                <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                  Not sure which principle applies? The master coach routes you.
+                </p>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* What Jay Sees Section */}
       {principle.whatJaySees && principle.whatJaySees !== "Coming soon..." && (
-        <section className="py-20 px-6">
+        <section id="guided" className="py-20 px-6 scroll-mt-20">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0 }}
@@ -700,7 +775,7 @@ export default function PrinciplePage({
       )}
 
       {/* The Prompt Section - Genius Extraction */}
-      <section className="py-24 px-6 relative">
+      <section id="coach" className="py-24 px-6 relative scroll-mt-20">
         {/* Subtle glow */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] -z-10 pointer-events-none"
@@ -720,15 +795,18 @@ export default function PrinciplePage({
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-8 h-px bg-white/30" />
               <span className="text-[10px] font-mono text-white/40 tracking-[0.3em]">
-                PUT IT TO WORK
+                CHAPTER {principle.number} COACH
               </span>
               <div className="w-8 h-px bg-white/30" />
             </div>
             <h2 className="font-mono text-2xl sm:text-3xl text-white tracking-wide mb-4">
-              THE GENIUS EXTRACTION™
+              {principle.coach.name.toUpperCase()}
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto">
               {principle.prompt.description}
+            </p>
+            <p className="mt-4 text-xs font-mono text-white/30 tracking-wider">
+              WORKS IN CLAUDE, CHATGPT (FREE INCLUDED), OR JAY-I
             </p>
           </motion.div>
 
@@ -770,15 +848,15 @@ export default function PrinciplePage({
               </div>
               <div className="flex flex-wrap gap-3">
                 <ActionTerminal
-                  label="JAY-I"
-                  prompt={principle.prompt.content}
-                />
-                <ActionTerminal
                   label="CLAUDE"
                   prompt={principle.prompt.content}
                 />
                 <ActionTerminal
                   label="CHATGPT"
+                  prompt={principle.prompt.content}
+                />
+                <ActionTerminal
+                  label="JAY-I"
                   prompt={principle.prompt.content}
                 />
               </div>
@@ -843,15 +921,8 @@ export default function PrinciplePage({
               href="/library"
               className="px-6 py-3 bg-white text-black font-mono text-sm tracking-wide hover:bg-white/90 transition-colors flex items-center gap-2"
             >
-              EXPLORE ALL PRINCIPLES
+              MEET ALL SEVEN COACHES
               <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="https://ai.abraham.com"
-              target="_blank"
-              className="px-6 py-3 border border-white/20 text-white/70 font-mono text-sm tracking-wide hover:border-white/40 hover:text-white transition-colors"
-            >
-              ACCESS JAY-I
             </Link>
           </div>
         </div>

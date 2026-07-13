@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Terminal, ChevronRight, Copy, Check } from "lucide-react";
+import { Search, Terminal, ChevronRight, Copy, Check, ClipboardCopy, FolderCog, FileCode2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import { principles } from "@/lib/principles";
+import { principles, masterCoach } from "@/lib/principles";
 
 // Typewriter effect component
 function TypewriterText({ text, delay = 0, speed = 30 }: { text: string; delay?: number; speed?: number }) {
@@ -122,17 +122,22 @@ function PrincipleModule({ principle, index }: { principle: typeof principles[0]
             <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />
           </div>
 
-          {/* Module title */}
-          <h3 className="font-mono text-sm tracking-[0.2em] text-white/90 uppercase mb-2 group-hover:text-white transition-colors">
-            {principle.title}
+          {/* Coach name - the headline */}
+          <h3 className="font-mono text-sm tracking-[0.15em] text-white/90 uppercase mb-1 group-hover:text-white transition-colors">
+            {principle.coach.name}
           </h3>
+
+          {/* Principle title as the coach's discipline */}
+          <p className="text-[10px] font-mono text-white/40 tracking-[0.2em] uppercase mb-2">
+            CH {principle.number} · {principle.title}
+          </p>
 
           {/* 1px separator */}
           <div className="w-8 h-px bg-white/20 mb-3 group-hover:w-full group-hover:bg-white/30 transition-all duration-500" />
 
-          {/* Core principle preview */}
+          {/* Coach role preview */}
           <p className="text-xs text-white/50 leading-relaxed line-clamp-2 group-hover:text-white/70 transition-colors">
-            {principle.corePrinciple}
+            {principle.coach.role}
           </p>
 
           {/* Status indicator */}
@@ -274,6 +279,104 @@ function PromptModule({
   );
 }
 
+// Master coach prompt: expandable + copy
+function MasterCoachPrompt() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(masterCoach.prompt.content);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div>
+      <div className="flex flex-wrap gap-3">
+        <button
+          onClick={handleCopy}
+          className={`flex items-center gap-2 px-4 py-2 border text-xs font-mono tracking-wider transition-all ${
+            copied
+              ? "border-white/40 text-white bg-white/10"
+              : "border-white/20 text-white/60 hover:border-white/40 hover:text-white"
+          }`}
+        >
+          {copied ? (
+            <>
+              <Check className="w-3 h-3" />
+              COPIED
+            </>
+          ) : (
+            <>
+              <Copy className="w-3 h-3" />
+              COPY THE MASTER COACH
+            </>
+          )}
+        </button>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-2 px-4 py-2 border border-white/10 text-white/40 text-xs font-mono tracking-wider hover:border-white/30 hover:text-white/70 transition-all"
+        >
+          <Terminal className="w-3 h-3" />
+          {isExpanded ? "HIDE PROMPT" : "VIEW PROMPT"}
+        </button>
+      </div>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="mt-4 bg-white/5 border border-white/10 p-4 font-mono text-xs text-white/70 leading-relaxed whitespace-pre-wrap">
+              {masterCoach.prompt.content}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// Delivery path card
+function PathCard({
+  number,
+  icon: Icon,
+  title,
+  status,
+  description,
+}: {
+  number: string;
+  icon: typeof Terminal;
+  title: string;
+  status: string;
+  description: string;
+}) {
+  const isActive = status === "ACTIVE";
+  return (
+    <div className="relative border border-white/10 bg-black p-6 group hover:border-white/20 transition-colors">
+      <div className="absolute top-0 left-0 w-3 h-px bg-white/40" />
+      <div className="absolute top-0 left-0 w-px h-3 bg-white/40" />
+      <div className="flex items-start justify-between mb-4">
+        <span className="font-mono text-3xl font-light text-white/20">{number}</span>
+        <Icon className="w-4 h-4 text-white/30" />
+      </div>
+      <h3 className="font-mono text-sm tracking-[0.15em] text-white/90 mb-2">{title}</h3>
+      <p className="text-xs text-white/40 leading-relaxed mb-4">{description}</p>
+      <div className="flex items-center gap-2">
+        <div
+          className={`w-1.5 h-1.5 rounded-full ${
+            isActive ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]" : "bg-white/30"
+          }`}
+        />
+        <span className="text-[10px] font-mono text-white/40 tracking-wider">{status}</span>
+      </div>
+    </div>
+  );
+}
+
 // Sample prompts data
 const prompts = [
   {
@@ -293,7 +396,7 @@ My business: [DESCRIBE YOUR BUSINESS]`,
   },
   {
     title: "Three Ways Growth Calculator",
-    principle: "VALUE MULTIPLICATION",
+    principle: "INFINITE LEVERAGE",
     prompt: `Using Jay Abraham's "Three Ways to Grow a Business" framework, calculate my growth potential.
 
 Current metrics:
@@ -454,14 +557,15 @@ export default function LibraryPage() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-white/30" />
               <span className="text-xs font-mono text-white/40 tracking-[0.3em]">
-                CORE MODULES
+                ONE COACH PER CHAPTER
               </span>
             </div>
             <h2 className="font-mono text-2xl text-white/90 tracking-wide">
-              The Seven Organizing Principles
+              The Seven Billion Dollar Coaches
             </h2>
             <p className="mt-2 text-sm text-white/40">
-              Select a module to access its full strategic framework, case studies, and AI prompts.
+              Each chapter of the book installs a principle. Each coach applies it to your business.
+              Select a coach to enter their chapter: framework, case studies, and the coach itself.
             </p>
           </motion.div>
 
@@ -476,6 +580,76 @@ export default function LibraryPage() {
               <PrincipleModule key={principle.slug} principle={principle} index={index + 4} />
             ))}
           </div>
+
+          {/* Master coach */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-10"
+          >
+            <div className="border border-white/20 bg-black relative">
+              <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
+              <div className="p-6 sm:p-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-[10px] font-mono text-white/60 tracking-wider border border-white/20 px-1.5 py-0.5">
+                    MASTER COACH
+                  </span>
+                  <span className="text-[10px] font-mono text-white/40 tracking-wider">
+                    ALL SEVEN PRINCIPLES
+                  </span>
+                </div>
+                <h3 className="font-mono text-lg text-white tracking-[0.1em] uppercase mb-2">
+                  {masterCoach.name}
+                </h3>
+                <p className="text-sm text-white/50 leading-relaxed max-w-2xl mb-6">
+                  {masterCoach.description}
+                </p>
+                <MasterCoachPrompt />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Three ways to use it */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-px bg-white/30" />
+              <span className="text-xs font-mono text-white/40 tracking-[0.3em]">
+                THREE WAYS TO USE YOUR COACHES
+              </span>
+            </div>
+            <p className="text-sm text-white/40 mb-8 max-w-2xl">
+              Every coach runs on the AI you already use. Claude, ChatGPT, or Jay-I if you have access. Pick your comfort level.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <PathCard
+                number="01"
+                icon={ClipboardCopy}
+                title="COPY AND PASTE"
+                status="ACTIVE"
+                description="Copy a coach and paste it into your own Claude or ChatGPT. Zero setup. Works on free accounts."
+              />
+              <PathCard
+                number="02"
+                icon={FolderCog}
+                title="INSTALL AS A PROJECT"
+                status="IN PRODUCTION"
+                description="Set up a permanent coach inside a Claude or ChatGPT Project, with a knowledge file attached. Tutorial videos coming."
+              />
+              <PathCard
+                number="03"
+                icon={FileCode2}
+                title="PERSONALIZED KNOWLEDGE FILE"
+                status="IN DESIGN"
+                description="Answer a short intake about your business and download a knowledge file that makes every coach know your business on day one."
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -306,7 +306,7 @@ export default function Hero() {
                 href="/library"
                 className="px-6 py-3 border border-white/20 text-white/70 font-mono text-sm tracking-wide hover:border-white/40 hover:text-white transition-colors"
               >
-                EXPLORE PROMPTS
+                MEET THE SEVEN COACHES
               </Link>
             </motion.div>
 
@@ -323,7 +323,7 @@ export default function Hero() {
                 <div className="w-2 h-2 rounded-full bg-white/20" />
                 <div className="w-2 h-2 rounded-full bg-white/20" />
                 <span className="ml-2 text-[10px] font-mono text-white/30 tracking-wider">
-                  JAY-I.TERMINAL
+                  BILLION-DOLLAR-COACH.TERMINAL
                 </span>
               </div>
               <div className="font-mono text-xs">

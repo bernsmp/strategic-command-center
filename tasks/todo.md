@@ -1,4 +1,31 @@
-# Strategic Command Center - Build Progress
+# Session 2026-07-13: Billion Dollar Coaches draft (for the Mike/Michelle three-way call)
+
+Source of truth: `docs/SITE-BRIEF-from-calls-2026-07.md` (extracted from the Jul 7 Mike call + Jul 10 Michelle call) and `/Users/maxb/Desktop/Jay Article Writer/Billion_Dollar_Mind_Book/BOOK-BACKEND-PLAN-v2-2026-07-06.md` (locked decisions + coach name table).
+
+Goal today: a tangible draft Michelle and Mike can react to. Clean router + seven coaches; world-building layer stays phase 2.
+
+- [x] 1. `lib/principles.ts`: coach identity on each principle (v2 plan names), master coach (the Resident Strategist, working name), all prompts rewritten in the coach-persona format (act-immediately opener, persona, rules, four-mirror self-placement on the master, session-notes export behavior baked in)
+- [x] 2. `components/Navigation.tsx`: ACCESS JAY-I demoted (nav CTA now MEET YOUR COACHES; JI remains one runtime option on prompt terminals)
+- [x] 3. `app/library/page.tsx`: The Seven Billion Dollar Coaches section, coach names on cards, master coach block + Three Paths section (Path 1 ACTIVE, Path 2 IN PRODUCTION, Path 3 IN DESIGN)
+- [x] 4. `app/library/[slug]/page.tsx`: coach identity chip in hero, choose-your-path trio (quick start / guided / bring a live decision), terminals reordered (Claude, ChatGPT, Jay-I), bottom CTA no longer pushes Jay-I
+- [x] 5. `app/ch/[number]/route.ts`: QR-target 308 redirects (/ch/1 through /ch/7; unknown numbers fall back to /library)
+- [x] 6. `components/Hero.tsx`: CTA copy Meet the Seven Coaches; terminal label neutralized
+- [x] 7. Ch5 drift fixed: subtitle/quote/principle now match the manuscript (backend, "customers you already have are worth ten times"); prompt archive's Three Ways calculator re-tagged to Infinite Leverage
+- [x] 8. Verified: `next build` passes; all routes curl-checked for new content; visual pass via Playwright screenshots (full-page blanks were whileInView animation artifacts, disproven with scrolled captures; grid, master coach, paths, coach block all render)
+- [ ] 9. Commit (including last night's package rename left uncommitted) — pending Max's review of the draft
+
+## Review (2026-07-13 session)
+
+**Changes:** coach layer over the existing Library architecture; no new dependencies; no env vars; no backend yet (email gate + Path 3 quiz are the next engineering steps per the v2 plan build order).
+**Verification:** build passed, routes curl-verified (coach names, redirect targets, zero ai.abraham.com pushes on home/chapter pages), scrolled-viewport screenshots confirmed all new sections render.
+**Limitations:** chapters 2-7 still show LOADING (whatJaySees/stories/checks are content work from the manuscript); Studio page untouched (its fate is an open call); email gate not built; /studio still uses old branding.
+**Flag for the Mike/Michelle call:** Ch4 coach is named "the Three Ways Multiplier" per the locked v2 table, but manuscript Ch4 is effort-compounding (no Three Ways in the chapter). Candidates if renamed: the Leverage Architect, the Compounding Engineer. Master coach name (Resident Strategist) is a working name, Michelle + Mike's call.
+
+Open items NOT for me to decide (flag at the call): Ch4 coach name ("Three Ways Multiplier" per locked v2 table, but Ch4 is effort-compounding, not Three Ways: candidates to rename), final master coach name (Michelle + Mike's call), email gate build (locked decision, next engineering step), Path 3 quiz builder (Maven pattern), CRM choice.
+
+---
+
+# Strategic Command Center - Build Progress (January build, historical)
 
 ## Completed Tasks
 
@@ -37,7 +64,7 @@
 ## File Structure
 
 ```
-strategic-command-center/
+billion-dollar-mind-book-site/
 ├── app/
 │   ├── globals.css          # Oracle design system + animations
 │   ├── layout.tsx           # Root layout with fonts
@@ -85,7 +112,7 @@ strategic-command-center/
 ## To Run
 
 ```bash
-cd strategic-command-center
+cd billion-dollar-mind-book-site
 npm run dev
 ```
 

@@ -61,15 +61,13 @@ export default function Navigation() {
 
           {/* Action button */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-              href="https://ai.abraham.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/library"
               className="flex items-center gap-2 px-4 py-2 border border-white/20 text-white/70 text-xs font-mono tracking-wider hover:border-white/40 hover:text-white transition-all"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-white/60 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
-              ACCESS JAY-I
-            </a>
+              MEET YOUR COACHES
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -103,15 +101,14 @@ export default function Navigation() {
             </Link>
           ))}
           <div className="pt-4 border-t border-white/10">
-            <a
-              href="https://ai.abraham.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/library"
+              onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-3 border border-white/20 text-white/70 text-xs font-mono tracking-wider hover:border-white/40 hover:text-white transition-all"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-white/60 shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
-              ACCESS JAY-I
-            </a>
+              MEET YOUR COACHES
+            </Link>
           </div>
         </div>
       </motion.div>
