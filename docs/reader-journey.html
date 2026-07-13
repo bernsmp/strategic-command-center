@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Reader's Journey - Inside the Billion Dollar Mind</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #000; height: 100%; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #f5f5f5;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; padding: 24px;
+  }
+  .canvas { width: 1560px; max-width: 100%; }
+  .overline {
+    font-size: 13px; letter-spacing: 0.35em; color: #C9A227;
+    text-transform: uppercase; margin-bottom: 10px; font-weight: 600;
+  }
+  h1 {
+    font-size: 44px; font-weight: 800; letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .sub { color: #888; font-size: 16px; margin-bottom: 42px; }
+
+  .journey { display: flex; align-items: stretch; gap: 0; margin-bottom: 46px; }
+  .station { flex: 1; position: relative; padding: 0 14px; }
+  .station + .station::before {
+    content: ""; position: absolute; left: -18px; top: 34px;
+    width: 36px; height: 2px;
+    background: linear-gradient(90deg, rgba(201,162,39,0.15), rgba(201,162,39,0.9));
+  }
+  .node {
+    width: 68px; height: 68px; border-radius: 50%;
+    border: 2px solid #C9A227; background: radial-gradient(circle at 50% 40%, rgba(201,162,39,0.28), rgba(0,0,0,0) 70%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 18px;
+    box-shadow: 0 0 28px rgba(201,162,39,0.35);
+  }
+  .step-num {
+    font-size: 11px; letter-spacing: 0.3em; color: #C9A227;
+    text-transform: uppercase; margin-bottom: 6px; font-weight: 700;
+  }
+  .station h2 { font-size: 19px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.01em; }
+  .station p { font-size: 13.5px; line-height: 1.5; color: #aaa; }
+  .station p b { color: #ddd; font-weight: 600; }
+  .route { display: inline-block; margin-top: 8px; font-family: "SF Mono", Menlo, monospace; font-size: 11px; color: #C9A227; border: 1px solid rgba(201,162,39,0.4); padding: 2px 8px; border-radius: 3px; }
+
+  .floor {
+    display: flex; align-items: center; gap: 26px;
+    border-top: 1px solid #222; padding-top: 30px;
+  }
+  .rooms { display: flex; gap: 10px; }
+  .room {
+    width: 66px; height: 66px; border: 1px solid #3a3a3a; border-radius: 6px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: #0a0a0a;
+  }
+  .room.lit { border-color: rgba(201,162,39,0.8); box-shadow: 0 0 18px rgba(201,162,39,0.25); background: #100d04; }
+  .room .n { font-family: "SF Mono", Menlo, monospace; font-size: 15px; color: #C9A227; font-weight: 700; }
+  .room .c { font-size: 8.5px; color: #999; text-align: center; padding: 0 3px; margin-top: 4px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.04em;}
+  .door {
+    width: 66px; height: 66px; border-radius: 6px;
+    border: 1px dashed rgba(201,162,39,0.7);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    background: linear-gradient(180deg, #000, #120e02);
+  }
+  .door .n { font-size: 17px; }
+  .door .c { font-size: 8.5px; color: #C9A227; text-transform: uppercase; letter-spacing: 0.08em; text-align: center; }
+  .master { flex: 1; }
+  .master h3 { font-size: 16px; margin-bottom: 6px; }
+  .master h3 span { color: #C9A227; }
+  .master p { font-size: 13px; color: #999; line-height: 1.55; max-width: 480px; }
+  .foot {
+    margin-top: 30px; font-size: 14px; color: #C9A227; letter-spacing: 0.02em;
+  }
+  .foot b { color: #f0e6c8; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="overline">Inside the Billion Dollar Mind</div>
+  <h1>The Reader's Journey</h1>
+  <div class="sub">From a printed page to a standing seat at Jay's table. The printed door never moves; everything behind it can keep improving forever.</div>
+
+  <div class="journey">
+    <div class="station">
+      <div class="node">&#128214;</div>
+      <div class="step-num">01 &middot; The Book</div>
+      <h2>A chapter ends</h2>
+      <p>Every chapter closes with a <b>printed QR code that never changes</b>. Ink is permanent; the code points at a place, not software.</p>
+    </div>
+    <div class="station">
+      <div class="node">&#10696;</div>
+      <div class="step-num">02 &middot; The Crossing</div>
+      <h2>Scan the code</h2>
+      <p>Not a homepage. A <b>threshold</b>: you've stepped inside the mind the book decodes, and your chapter's room opens.</p>
+      <span class="route">/ch/3</span>
+    </div>
+    <div class="station">
+      <div class="node">&#127903;</div>
+      <div class="step-num">03 &middot; Ticket Check</div>
+      <h2>The book is the ticket</h2>
+      <p>Email plus a receipt or Amazon order number, <b>once</b>. Every room stays open. The email list is half the point.</p>
+    </div>
+    <div class="station">
+      <div class="node">&#128273;</div>
+      <div class="step-num">04 &middot; The Room</div>
+      <h2>The chapter, alive</h2>
+      <p><b>What Jay sees</b>, the chapter's stories retold, and three checks the reader runs on their own business.</p>
+      <span class="route">/library</span>
+    </div>
+    <div class="station">
+      <div class="node">&#9670;</div>
+      <div class="step-num">05 &middot; The Coach</div>
+      <h2>Billion Dollar Coach</h2>
+      <p>Paste into <b>any AI</b> (ChatGPT, Claude, JI). Quick start, guided, or bring a live decision. Leave with a written summary of the session.</p>
+    </div>
+    <div class="station">
+      <div class="node">&#128682;</div>
+      <div class="step-num">06 &middot; The Last Door</div>
+      <h2>After the book</h2>
+      <p>A sealed door at the end of the hall. <b>What's behind it is today's decision:</b> the clone, challenges, consulting, or a call with Jay.</p>
+    </div>
+  </div>
+
+  <div class="floor">
+    <div class="rooms">
+      <div class="room lit"><span class="n">01</span><span class="c">Hidden Asset Auditor</span></div>
+      <div class="room lit"><span class="n">02</span><span class="c">Preeminence Architect</span></div>
+      <div class="room lit"><span class="n">03</span><span class="c">Emissary, Other Worlds</span></div>
+      <div class="room lit"><span class="n">04</span><span class="c">Leverage Multiplier</span></div>
+      <div class="room lit"><span class="n">05</span><span class="c">Backend Architect</span></div>
+      <div class="room lit"><span class="n">06</span><span class="c">Risk Reversal Engineer</span></div>
+      <div class="room lit"><span class="n">07</span><span class="c">Constraint Inverter</span></div>
+      <div class="door"><span class="n">&#128274;</span><span class="c">The Last Door</span></div>
+    </div>
+    <div class="master">
+      <h3>The master coach is <span>Jay Abraham</span></h3>
+      <p>His first question: where are you standing, first exposure or longtime student? Then he routes you to whichever room bears on the decision in front of you. All seven rooms are complete and clickable today.</p>
+    </div>
+  </div>
+
+  <div class="foot"><b>Enter at any room.</b> One ticket opens all of them. The reader never meets a platform, only a place.</div>
+</div>
+</body>
+</html>
