@@ -85,14 +85,12 @@ export default function FloorPlanMap() {
             </Link>
             <Link
               href={`/library/${p.slug}`}
-              className="hidden sm:flex absolute -translate-x-1/2 -translate-y-1/2 flex-col items-center px-2.5 py-1.5 bg-black/60 backdrop-blur-[2px] border border-white/10 hover:border-[#C9A227]/60 transition-colors no-underline"
+              aria-label={`Room ${p.number}: ${p.coach.name}`}
+              className="hidden sm:flex absolute -translate-x-1/2 -translate-y-1/2 px-2.5 py-1.5 bg-black/60 backdrop-blur-[2px] border border-white/10 hover:border-[#C9A227]/60 transition-colors no-underline"
               style={{ left: `${r.label.x}%`, top: `${r.label.y}%` }}
             >
-              <span className="font-mono text-[9px] tracking-[0.25em] text-white/45">
+              <span className="font-mono text-[10px] tracking-[0.25em] text-white/80">
                 ROOM {String(p.number).padStart(2, "0")}
-              </span>
-              <span className="font-mono text-[10px] tracking-[0.1em] text-white/85 uppercase whitespace-nowrap">
-                {p.coach.name.replace(/^The /, "")}
               </span>
             </Link>
           </span>
