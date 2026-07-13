@@ -282,10 +282,11 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6 }}
             >
-              Install Jay Abraham's strategic operating system. Access{" "}
-              <span className="text-white/80">Genius Extractions™</span>—insights
-              impossible to find anywhere else, extracted from 500 million words
-              and 50 years of breakthrough thinking.
+              The value in your business isn't missing. It's unseen. Step inside
+              the mind that spent 50 years proving it: seven rooms, decoded from
+              500 million words of Jay Abraham's thinking, each one training a way
+              of seeing you've been circling for years. The{" "}
+              <span className="text-white/80">Genius Extractions™</span> live here.
             </motion.p>
 
             {/* CTA buttons */}
@@ -300,13 +301,13 @@ export default function Hero() {
                 className="px-6 py-3 bg-white text-black font-mono text-sm tracking-wide hover:bg-white/90 transition-colors flex items-center gap-2"
               >
                 <Terminal className="w-4 h-4" />
-                ACCESS THE LIBRARY
+                ENTER THE SEVEN ROOMS
               </Link>
               <Link
                 href="/library"
                 className="px-6 py-3 border border-white/20 text-white/70 font-mono text-sm tracking-wide hover:border-white/40 hover:text-white transition-colors"
               >
-                MEET THE SEVEN COACHES
+                MEET YOUR COACHES
               </Link>
             </motion.div>
 

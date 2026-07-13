@@ -13,6 +13,9 @@ export interface Principle {
   title: string;
   subtitle: string;
   coach: Coach;
+  // One-line teaser shown on the floor plan while the room is under
+  // construction (progressive revelation: locked rooms show what's at the end).
+  roomTeaser: string;
   jayQuote: string;
   corePrinciple: string;
   whatJaySees: string;
@@ -81,6 +84,7 @@ export const principles: Principle[] = [
       name: "The Hidden Asset Auditor",
       role: "Sees the value you walk past every day",
     },
+    roomTeaser: "Where you see what you've been walking past.",
     jayQuote: "You can't see what you're standing too close to.",
     corePrinciple: "The owner is always too close to see the real problem—and the real opportunity.",
     whatJaySees: `When Jay walks into a business, he does something most consultants don't. He ignores the problem.
@@ -178,6 +182,7 @@ Start now: ask me the four-angle question, then have me describe my business in 
       name: "The Preeminence Architect",
       role: "Positions you as the only real choice in your market",
     },
+    roomTeaser: "Where comparison stops being possible.",
     jayQuote: "It's not about being louder. It's about being indispensable. It's about becoming the only logical choice in your market.",
     corePrinciple: "Position your business so they can only choose you.",
     whatJaySees: "Coming soon...",
@@ -223,6 +228,7 @@ Start now: ask me the four-angle question, then have me describe my business and
       name: "The Emissary from Other Worlds",
       role: "Brings you answers from industries you've never looked at",
     },
+    roomTeaser: "Where your problem turns out to be already solved.",
     jayQuote: "The answer to your problem has already been solved—in an industry you've never looked at.",
     corePrinciple: "Borrow proven solutions from unrelated industries and synthesize them into combinations competitors can't reverse-engineer.",
     whatJaySees: "Coming soon...",
@@ -268,6 +274,7 @@ Start now: ask me for my industry and my specific challenge.`,
       name: "The Three Ways Multiplier",
       role: "Turns effort that adds into effort that compounds",
     },
+    roomTeaser: "Where effort starts compounding instead of adding.",
     jayQuote: "Why do something once when you can do it once and benefit forever?",
     corePrinciple: "Structure your business so effort compounds rather than adds.",
     whatJaySees: "Coming soon...",
@@ -313,6 +320,7 @@ Start now: ask me the four-angle question, then have me describe my business and
       name: "The Backend Architect",
       role: "Multiplies what every customer is worth to you",
     },
+    roomTeaser: "Where the customers you have become worth ten times more.",
     jayQuote: "The customers you already have are worth ten times what you're getting from them.",
     corePrinciple: "The people already inside the door are the real opportunity.",
     whatJaySees: "Coming soon...",
@@ -358,6 +366,7 @@ Start now: ask me the four-angle question, then have me describe my business and
       name: "The Risk Reversal Engineer",
       role: "Structures offers your customer can't rationally refuse",
     },
+    roomTeaser: "Where risk stops being the reason.",
     jayQuote: "When you take away the risk, you take away the reason to say no.",
     corePrinciple: "Structure offers so the customer has nothing to lose and everything to gain.",
     whatJaySees: "Coming soon...",
@@ -403,6 +412,7 @@ Start now: ask me the four-angle question, then have me describe my offer and th
       name: "The Constraint Inverter",
       role: "Turns your biggest limitation into your unfair advantage",
     },
+    roomTeaser: "Where the thing you apologize for becomes the moat.",
     jayQuote: "Your biggest constraint isn't holding you back. Your perception of it is.",
     corePrinciple: "Transform limitations into your greatest competitive advantages.",
     whatJaySees: "Coming soon...",

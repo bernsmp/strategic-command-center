@@ -449,7 +449,7 @@ export default function PrinciplePage({
               className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs font-mono tracking-wider"
             >
               <ChevronLeft className="w-4 h-4" />
-              BACK TO LIBRARY
+              BACK TO THE FLOOR PLAN
             </Link>
           </motion.div>
 
@@ -466,7 +466,7 @@ export default function PrinciplePage({
               </span>
               <div className="pb-6">
                 <span className="text-[10px] font-mono text-white/40 tracking-[0.3em]">
-                  PRINCIPLE {principle.number} OF 7
+                  ROOM {principle.number} OF 7
                 </span>
               </div>
             </div>
@@ -599,9 +599,9 @@ export default function PrinciplePage({
                 </a>
               ) : (
                 <div className="border border-white/5 p-6 opacity-60">
-                  <p className="font-mono text-xs text-white/30 tracking-[0.2em] mb-2">GUIDED · IN PRODUCTION</p>
+                  <p className="font-mono text-xs text-white/30 tracking-[0.2em] mb-2">GUIDED · UNDER CONSTRUCTION</p>
                   <p className="text-sm text-white/40 leading-relaxed">
-                    The full chapter walkthrough is being built. The coach below already works.
+                    This room is still being furnished. The coach is already on duty below.
                   </p>
                 </div>
               )}
@@ -877,7 +877,7 @@ export default function PrinciplePage({
                 <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <div className="text-right">
                   <p className="text-[10px] font-mono text-white/30 tracking-wider">
-                    PREVIOUS
+                    PREVIOUS ROOM
                   </p>
                   <p className="font-mono text-sm">{prevPrinciple.title}</p>
                 </div>
@@ -893,7 +893,7 @@ export default function PrinciplePage({
               >
                 <div>
                   <p className="text-[10px] font-mono text-white/30 tracking-wider">
-                    NEXT
+                    NEXT ROOM
                   </p>
                   <p className="font-mono text-sm">{nextPrinciple.title}</p>
                 </div>

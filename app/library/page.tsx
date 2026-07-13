@@ -135,16 +135,22 @@ function PrincipleModule({ principle, index }: { principle: typeof principles[0]
           {/* 1px separator */}
           <div className="w-8 h-px bg-white/20 mb-3 group-hover:w-full group-hover:bg-white/30 transition-all duration-500" />
 
-          {/* Coach role preview */}
+          {/* Room teaser: open rooms show the coach's role, locked rooms show what's at the end */}
           <p className="text-xs text-white/50 leading-relaxed line-clamp-2 group-hover:text-white/70 transition-colors">
-            {principle.coach.role}
+            {principle.stories.length > 0 ? principle.coach.role : principle.roomTeaser}
           </p>
 
-          {/* Status indicator */}
+          {/* Room status */}
           <div className="mt-4 flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-white/40 group-hover:bg-white group-hover:shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all" />
+            <div
+              className={`w-1.5 h-1.5 rounded-full transition-all ${
+                principle.stories.length > 0
+                  ? "bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.4)] group-hover:bg-white"
+                  : "bg-white/30 group-hover:bg-white/50"
+              }`}
+            />
             <span className="text-[10px] font-mono text-white/30 tracking-wider group-hover:text-white/50 transition-colors">
-              {principle.stories.length > 0 ? "ACTIVE" : "LOADING"}
+              {principle.stories.length > 0 ? "ROOM OPEN" : "UNDER CONSTRUCTION · COACH ON DUTY"}
             </span>
           </div>
         </div>
@@ -529,9 +535,9 @@ export default function LibraryPage() {
             transition={{ delay: 0.8 }}
             className="text-white/40 max-w-2xl text-lg leading-relaxed"
           >
-            Access the cognitive architecture extracted from{" "}
+            The interior of a mind, decoded from{" "}
             <span className="text-white/70">500 million words</span> of Jay Abraham's thinking.
-            Each module represents a distinct strategic capability.
+            Seven rooms. Seven ways of seeing. One coach on duty in each.
           </motion.p>
 
           {/* 1px separator line */}
@@ -557,15 +563,16 @@ export default function LibraryPage() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-white/30" />
               <span className="text-xs font-mono text-white/40 tracking-[0.3em]">
-                ONE COACH PER CHAPTER
+                THE FLOOR PLAN · ONE ROOM PER CHAPTER
               </span>
             </div>
             <h2 className="font-mono text-2xl text-white/90 tracking-wide">
-              The Seven Billion Dollar Coaches
+              The Seven Rooms
             </h2>
-            <p className="mt-2 text-sm text-white/40">
-              Each chapter of the book installs a principle. Each coach applies it to your business.
-              Select a coach to enter their chapter: framework, case studies, and the coach itself.
+            <p className="mt-2 text-sm text-white/40 max-w-2xl">
+              You&apos;re inside the Billion Dollar Mind. Each chapter of the book opens one room,
+              and each room is home to one of the seven Billion Dollar Coaches. The way of seeing
+              each room trains was running in Jay the whole time. Enter a room to have it trained into you.
             </p>
           </motion.div>
 
@@ -648,6 +655,41 @@ export default function LibraryPage() {
                 status="IN DESIGN"
                 description="Answer a short intake about your business and download a knowledge file that makes every coach know your business on day one."
               />
+            </div>
+          </motion.div>
+
+          {/* The Last Door: the destination visible from the entrance */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <div className="relative border border-white/10 bg-black overflow-hidden">
+              {/* Faint door-shaped glow on the right */}
+              <div
+                className="absolute right-12 top-1/2 -translate-y-1/2 w-24 h-40 border border-white/15 pointer-events-none hidden sm:block"
+                style={{ boxShadow: "0 0 60px rgba(255,255,255,0.06), inset 0 0 30px rgba(255,255,255,0.04)" }}
+              />
+              <div
+                className="absolute right-16 top-1/2 -translate-y-1/2 w-1 h-24 bg-gradient-to-b from-transparent via-white/30 to-transparent pointer-events-none hidden sm:block"
+              />
+
+              <div className="p-8 sm:p-10 max-w-2xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-[10px] font-mono text-white/60 tracking-wider border border-white/20 px-1.5 py-0.5">
+                    THE LAST DOOR
+                  </span>
+                  <span className="text-[10px] font-mono text-white/30 tracking-wider">
+                    SEALED · OPENS AFTER THE SEVEN ROOMS
+                  </span>
+                </div>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  Every room in this place points at the same door at the end of the hall.
+                  Behind it: what comes after the book, with the mind these rooms were decoded from.
+                  It isn&apos;t open yet. Walk the rooms. You&apos;ll know when it is.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
