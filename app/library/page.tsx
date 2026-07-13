@@ -5,6 +5,7 @@ import { Search, Terminal, ChevronRight, Copy, Check, ClipboardCopy, FolderCog, 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import GatedPrompt, { TicketGateProvider } from "@/components/GatedPrompt";
+import FloorPlanMap from "@/components/FloorPlanMap";
 import Navigation from "@/components/Navigation";
 import { recordEvent } from "@/lib/gate";
 import { principles, masterCoach } from "@/lib/principles";
@@ -587,6 +588,16 @@ export default function LibraryPage() {
               and each room is home to one of the seven Billion Dollar Coaches. The way of seeing
               each room trains was running in Jay the whole time. Enter a room to have it trained into you.
             </p>
+          </motion.div>
+
+          {/* The living floor plan: the map with a label on every room */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-10"
+          >
+            <FloorPlanMap />
           </motion.div>
 
           {/* Principles grid - architectural layout */}
