@@ -232,11 +232,55 @@ Start now: ask me the four-angle question, then have me describe my business and
     roomTeaser: "Where your problem turns out to be already solved.",
     jayQuote: "The answer to your problem has already been solved—in an industry you've never looked at.",
     corePrinciple: "Borrow proven solutions from unrelated industries and synthesize them into combinations competitors can't reverse-engineer.",
-    whatJaySees: "Coming soon...",
-    keyInsight: "Coming soon...",
-    stories: [],
-    threeChecks: [],
-    howAiFitsIn: "Coming soon...",
+    whatJaySees: `At the peak of his consulting career, Jay was working with 10 to 12 different industries simultaneously. Not one at a time. All at the same time. In any given month he might advise an ice cream distributor in the morning, a software company after lunch, and a real estate developer before dinner. Everyone told him to specialize. He didn't, because the ideas that worked in ice cream were invisible to the people in software, and what was standard practice in publishing was unheard of in manufacturing.
+
+In his words: "Most people think the advantage is seeing something others miss. That's where the story begins. The real magic is when you take what already works or is considered standard procedure in one arena and transplant it into another where it looks like genius."`,
+    keyInsight: "A competitor can see your results. They can even see what you're doing differently. What they can't see is where the idea came from. Borrow from worlds your industry never studies, and your advantage becomes untraceable.",
+    stories: [
+      {
+        title: "The Wall Street Furniture Store",
+        hook: "A furniture store in Omaha, run like a trading desk.",
+        story: `Nebraska Furniture Mart sells the same couches, tables, and lamps as every big-box competitor. Same SKUs. Same suppliers. Same showroom smell.
+
+Years before anyone talked about real-time anything, they built a system that scraped every competitor's prices, every day. At midnight, electronic price tags across the stores updated automatically, always matching or beating the market. They called it "mark to market."
+
+That's stock trading language, not furniture language. They imported it from Wall Street and installed it where nobody had seen it before.
+
+Berkshire Hathaway bought a majority stake in 1983 because the numbers were staggering. The flagship store reportedly does more business per square foot than almost any furniture retailer in America.`,
+        lesson: "They didn't invent a new product. They imported a concept from a completely different world and installed it where nobody had seen it, and nobody in retail could decode it.",
+      },
+      {
+        title: "The Drill Bit Hughes Never Sold",
+        hook: "Howard Hughes Sr. built his fortune on a drill bit nobody could buy.",
+        story: `In the early 1900s, oil drilling stopped where hard rock started. Bits ground down or broke, and fortunes evaporated against stone.
+
+Hughes designed a rotary drill bit with rolling cutters that punched through rock that stopped everyone else, and filed the patent in 1909. Drillers needed it. Hughes never sold a single one.
+
+Leasing was already standard practice for tractors, industrial machinery, and railroad cars. Nobody in oil thought that way. Hughes did: not for sale, leased per project. The driller pays, the bit works, the driller hands it back. Next project, he pays again.
+
+Every well drilled with his technology paid Hughes over and over, for decades. The royalties flowed in faster than his famous son could spend them.`,
+        lesson: "Hughes didn't invent leasing. He imported it. The fortune came from one question: who already solved this in a different context?",
+      },
+    ],
+    threeChecks: [
+      {
+        area: "Your Idea Diet",
+        question: "Where did your last three breakthroughs come from? If they all trace back to your own industry's books, conferences, and peers, you're rearranging the same pieces as everyone you compete with.",
+      },
+      {
+        area: "Your Problem Statement",
+        question: "Can you state your biggest problem precisely enough to search other worlds with it? 'More customers' is a wish. 'Premium prices for a product buyers can't evaluate beforehand' is a problem wine, art, and luxury goods already solved.",
+      },
+      {
+        area: "Your Borrowed Edge",
+        question: "Name one mechanism in your business that a competitor couldn't trace to its source. If everything you run can be decoded by someone who only knows your industry, all of it can be copied.",
+      },
+    ],
+    howAiFitsIn: `Your competitors are stuck in the same bubble you are. They read the same books, attend the same conferences, follow the same thought leaders. If the answer were inside your industry, someone would have found it by now.
+
+The breakthrough is outside. In an industry you've never studied. In a solution that's been working for decades, somewhere else.
+
+Jay's edge came from his calendar: ten industries at once made the cross-industry collisions inevitable. You don't have that calendar. AI is the emissary you don't have time to be. Give this coach your industry and your sharpest problem statement, and it goes looking in the worlds you've been dismissing as not relevant.`,
     prompt: {
       title: "The Emissary from Other Worlds",
       description: "Your Chapter 3 coach. Your problem is already solved in an industry you've never looked at. This coach goes and gets the answer.",

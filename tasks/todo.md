@@ -1,3 +1,34 @@
+# Plan 2026-07-13: Write rooms 2-7 walkthrough content (PENDING MAX APPROVAL)
+
+Goal: fill the five placeholder fields per room in `lib/principles.ts` for chapters 2-7 so every room is complete end to end like Room 1. The coach prompts are already done; this is the reading layer around them.
+
+**Fields per room:** `whatJaySees` (how Jay works this discipline, ~4 short paragraphs), `keyInsight` (one distilled takeaway), `stories` x2 (title/hook/story/lesson, compressed retellings of the chapter's strongest stories), `threeChecks` x3 (diagnostic area + question), `howAiFitsIn` (bridge from the principle to the room's coach).
+
+**Source of truth:** `Billion_dollar_mind/editing_closeout_2026-06-02/clean_candidates/` (newest local manuscript exports). Every story fact gets checked against `Billion_Dollar_Mind_Book/BOOK-AUDIT-REPORT-2026-07-05.md` Category E flags before it ships; flagged stories don't go on the site.
+
+**Register template:** Room 1 (Perceptual Asymmetry). Short sentences, real numbers, no em dashes (write hook enforces), no AI tells.
+
+**Order:** Room 3 first (it's the /ch/3 QR demo route), then 2, 4, 5, 6, 7.
+
+**Per-room loop:**
+- [x] R3.1 Read chapter clean candidate, shortlist stories, check audit flags, pick 2 clean ones (Nebraska Furniture Mart + Hughes drill bit; both pass audit story-ownership checks)
+- [x] R3.2 Draft the five fields in Room 1 register
+- [x] R3.3 Insert into lib/principles.ts, next build, served-page verify
+- [x] R3.3b Codex QC (gpt-5.6-sol high, per Max): FIX FIRST verdict, 5 blockers; fact-precision + length fixes applied; two flags overruled as verbatim-source book voice ("Hughes didn't invent leasing. He imported it." / "Same SKUs..."). Re-built + re-verified.
+- [ ] R3.4 Max register sign-off on Room 3 before batching rooms 2, 4-7
+- [ ] R2, R4, R5, R6, R7 same loop, one commit per room, Codex QC each
+- [ ] Regenerate the walkthrough Google Doc after sign-off (md already updated: Rooms 1+3 complete; NOTE regen = new URL, confirm Max hasn't shared the current one)
+
+**Known constraints (from the 2026-07-05 book audit):**
+- Ch6 gas-station $500M story: unresolved existing-vs-proposed contradiction (CONT-003, Mike must rule). Use other Ch6 stories.
+- Ch3 has a Decoding-Genius/Emissary duplication regression in the June 2 export; pull story text carefully.
+- FedEx full story belongs to Ch7 per the documented decision; if used, it goes in Room 7 only.
+- Michelle's guided-path worksheets are separate work, blocked on her chapter-objective definitions. Room walkthroughs don't depend on them.
+
+**Default assumptions (flag if wrong):** rooms retell the chapter's own anchor stories (recognition after the QR scan), matching the Room 1 pattern; Max is the only review gate, Mike and Michelle react to it live on the site.
+
+---
+
 # Overnight run 2026-07-13 (Max asleep; review in the morning)
 
 Work order from Max: commit + push everything, generate a few Compass-HQ-style hero video versions for this site via Higgsfield, then build the scroll-world (per `/Users/maxb/Documents/skills/50 - Skill Systems/Creative Elements/skills/scroll-world/SKILL.md`) even if it doesn't get presented. Finish so it's reviewable in the morning.
