@@ -2,7 +2,7 @@
 
 ## Review (2026-07-20 session)
 **Done + verified in production (curl-checked):** P0 committed/pushed/deployed (mobile clips + preload fix live); P2 gold pass (Library + all room pages, #C9A227 facade gold), door-parting room-entry transitions with gold seam + room announcement, entry choice buttons (self-explore / guided tour) in Library hero, floor-plan map breakout to min(90vw,1400px). Two commits: 86e21b5, 7e2baa6. Screenshots verified via Playwright (library hero, map, doors mid-transition, settled room, story cards).
-**Deliberately NOT done — Max's call:** the 2 remaining world-scroll rooms. Generating them burns Higgsfield credits on seam-matched video (the original build scoped 5 scenes for seam quality on purpose). Say "build the last 2 world rooms" to green-light.
+**~~Deliberately NOT done~~ → DONE later the same night (a4eddf4):** the 2 remaining world-scroll rooms shipped as `leg-r03` + `leg-r06`, generated via KIE (not Higgsfield, so no credit burn). World scroll is the full seven-stop chain. Verified 2026-07-20: assets present in `public/videos/world/` with mobile variants + posters.
 **Still blocked on people:** GHL webhook URL (Michelle) for GATE_WEBHOOK_URL — production still captures nothing until set.
 **No new deps, no env changes.**
 
@@ -23,10 +23,10 @@ State check: site deployed to Vercel Jul 14 (deploy-for-Jay-demo commitment met)
 - [ ] Slower, more dramatic room-entry transitions
 - [ ] Entry choice button: "Self-explore" vs "Take a guided tour" (Radiant Reflections pattern)
 - [ ] Bigger live "you are here" map
-- [ ] Build the 2 remaining world-scroll rooms (5 of 7 built)
+- [x] Build the 2 remaining world-scroll rooms — DONE (a4eddf4), 7 of 7 via KIE
 
 ## P3 — Coach avatars (likeness approved on the call)
-- [ ] Generate Jay-likeness avatars, one jacket color per coach, black+gold treatment, from the jay-mirror April image pack. Room heroes + coach cards + floor plan.
+- [x] Generate Jay-likeness avatars, one jacket color per coach, black+gold treatment — DONE (9923e33), room heroes + coach cards + floor plan
 
 ## P4 — Follow-ups to chase (people, not code)
 - [ ] Did Mike demo V1 to Jay last week? (drives Jay audio capture window)
