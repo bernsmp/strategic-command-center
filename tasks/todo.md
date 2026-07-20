@@ -1,4 +1,11 @@
-# Plan 2026-07-20: Post-call next steps (PENDING MAX APPROVAL)
+# Plan 2026-07-20: Post-call next steps (APPROVED; P0+P2 executed 2026-07-20)
+
+## Review (2026-07-20 session)
+**Done + verified in production (curl-checked):** P0 committed/pushed/deployed (mobile clips + preload fix live); P2 gold pass (Library + all room pages, #C9A227 facade gold), door-parting room-entry transitions with gold seam + room announcement, entry choice buttons (self-explore / guided tour) in Library hero, floor-plan map breakout to min(90vw,1400px). Two commits: 86e21b5, 7e2baa6. Screenshots verified via Playwright (library hero, map, doors mid-transition, settled room, story cards).
+**Deliberately NOT done — Max's call:** the 2 remaining world-scroll rooms. Generating them burns Higgsfield credits on seam-matched video (the original build scoped 5 scenes for seam quality on purpose). Say "build the last 2 world rooms" to green-light.
+**Still blocked on people:** GHL webhook URL (Michelle) for GATE_WEBHOOK_URL — production still captures nothing until set.
+**No new deps, no env changes.**
+
 
 State check: site deployed to Vercel Jul 14 (deploy-for-Jay-demo commitment met). Last commit Jul 13; uncommitted in tree: mobile video variants + scrub-engine preload fix (real perf work), plus the call extract doc. Aug 1 wrap target = 12 days out.
 
