@@ -759,6 +759,16 @@ export default function LibraryPage() {
               </div>
             </div>
           </motion.div>
+
+          {/* The Appendix: one quiet pointer */}
+          <div className="mt-10">
+            <Link
+              href="/appendix"
+              className="text-xs font-mono text-white/50 tracking-[0.2em] hover:text-[#C9A227] transition-colors"
+            >
+              THE APPENDIX → every named idea defined in one line
+            </Link>
+          </div>
         </div>
       </section>
 

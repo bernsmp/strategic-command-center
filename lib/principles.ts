@@ -286,7 +286,11 @@ Start now: ask me the four-angle question, then have me describe my business and
     corePrinciple: "Borrow proven solutions from unrelated industries and synthesize them into combinations competitors can't reverse-engineer.",
     whatJaySees: `At the peak of his consulting career, Jay was working with 10 to 12 different industries simultaneously. Not one at a time. All at the same time. In any given month he might advise an ice cream distributor in the morning, a software company after lunch, and a real estate developer before dinner. Everyone told him to specialize. He didn't, because the ideas that worked in ice cream were invisible to the people in software, and what was standard practice in publishing was unheard of in manufacturing.
 
-In his words: "Most people think the advantage is seeing something others miss. That's where the story begins. The real magic is when you take what already works or is considered standard procedure in one arena and transplant it into another where it looks like genius."`,
+In his words: "Most people think the advantage is seeing something others miss. That's where the story begins. The real magic is when you take what already works or is considered standard procedure in one arena and transplant it into another where it looks like genius."
+
+The strategist who only works with software companies sees software problems and software solutions. The consultant who only serves law firms thinks in law firm terms. They swim in the same idea pool as everyone else in their space, drawing from the same limited set of solutions. When one of them has a breakthrough, a competitor copies it in six months. Jay was an emissary instead: someone who moved between worlds, carrying ideas from one place to another. When he walked into a software company, he brought lessons from ice cream distribution, retail operations, and direct mail. Industries where the problem had already been solved.
+
+You don't need twelve industries to get this advantage. You need one question, asked before you try to solve anything: who else has this exact problem in a completely different industry, and how did they solve it? Exact problem means specific. Not "how do I get more customers," but "how do I get customers who pay premium prices for something they can't evaluate before buying." That one has been solved in wine, art, and luxury goods. Completely different means fields you've been dismissing as not relevant. The answer is usually sitting there, already proven, waiting to be imported.`,
     keyInsight: "A competitor can see your results. They can even see what you're doing differently. What they can't see is where the idea came from. Borrow from worlds your industry never studies, and your advantage becomes untraceable.",
     stories: [
       {
@@ -472,11 +476,15 @@ Start now: ask me the four-angle question, then have me describe my business and
     roomTeaser: "Where the customers you have become worth ten times more.",
     jayQuote: "The customers you already have are worth ten times what you're getting from them.",
     corePrinciple: "The people already inside the door are the real opportunity.",
-    whatJaySees: `Most people think about business as a series of transactions. Jay thinks about it as a portfolio of relationships. Transactions end. Relationships compound.
+    whatJaySees: `In 2010, a cycling coach named Dave Brailsford took over British Cycling, a program so used to losing that one major bike manufacturer reportedly refused to sell it equipment. His philosophy had a name: the aggregation of marginal gains. Find a hundred things you can improve by one percent and let the compound effect do the work. He optimized the riders' pillows, the massage gel, the truck that carried the bikes. Within a few years, British riders were dominating Olympic cycling. Brailsford won by measuring what every other coach had decided wasn't worth measuring. Most people read that as a sports story. Jay lives it as business philosophy.
+
+Most people think about business as a series of transactions. Jay thinks about it as a portfolio of relationships. Transactions end. Relationships compound.
 
 Most businesses design their revenue model around the first transaction. Get someone in the door, close the sale, scramble for the next customer. Every dollar of growth requires a fresh dollar of acquisition. You're always hunting. Always filling the pipeline. Always wondering if next month will be feast or famine.
 
-Jay designs businesses with backend architecture instead: map the full sequence of what a customer could buy from you over years, then build everything else to feed that sequence. Every single decision changes when you know what a customer is worth over time.`,
+Jay designs businesses with backend architecture instead: map the full sequence of what a customer could buy from you over years, then build everything else to feed that sequence. Every single decision changes when you know what a customer is worth over time.
+
+Right now, most of your customers buy once or twice and drift away. Not because they're unhappy. Because nobody gave them a reason to stay. You didn't do anything wrong. You just didn't do anything at all. That's the quiet leak this room teaches you to see: the relationships you already paid to create, sitting there waiting to compound.`,
     keyInsight: "Right now, most of your customers buy once or twice and drift away. Not because they're unhappy. Because nobody gave them a reason to stay. You didn't do anything wrong. You just didn't do anything at all.",
     stories: [
       {

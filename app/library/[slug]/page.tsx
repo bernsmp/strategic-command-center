@@ -1048,6 +1048,14 @@ export default function PrinciplePage({
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+          <p className="mt-8">
+            <Link
+              href="/appendix"
+              className="text-xs font-mono text-white/50 tracking-[0.2em] hover:text-[#C9A227] transition-colors"
+            >
+              UNFAMILIAR WORD? THE APPENDIX DEFINES EVERY TERM →
+            </Link>
+          </p>
         </div>
       </section>
     </main>
