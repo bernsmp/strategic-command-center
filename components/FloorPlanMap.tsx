@@ -12,16 +12,17 @@ import { principles } from "@/lib/principles";
 
 const GOLD = "#C9A227";
 
-// Percent positions in the 1276x720 frame: where the room is (dot) and
-// where its label floats (out in empty black space).
+// Percent positions in the hero3-map frame (the source cropped 12% L/R and
+// 8% T/B, then Topaz-upscaled 2x, so the rooms fill more of the frame):
+// where the room is (dot) and where its label floats (in empty black space).
 const ROOMS: Record<number, { room: { x: number; y: number }; label: { x: number; y: number } }> = {
-  1: { room: { x: 47.8, y: 45.1 }, label: { x: 47.8, y: 61 } },
-  2: { room: { x: 22.7, y: 36.8 }, label: { x: 9, y: 30 } },
-  3: { room: { x: 42.7, y: 16.7 }, label: { x: 33, y: 6 } },
-  4: { room: { x: 58.4, y: 16.7 }, label: { x: 70, y: 6 } },
-  5: { room: { x: 74.5, y: 45.1 }, label: { x: 88.5, y: 38 } },
-  6: { room: { x: 58.4, y: 70.8 }, label: { x: 71, y: 86 } },
-  7: { room: { x: 28.6, y: 72.2 }, label: { x: 14, y: 86 } },
+  1: { room: { x: 47.1, y: 44.2 }, label: { x: 47.1, y: 63 } },
+  2: { room: { x: 14.1, y: 34.3 }, label: { x: 6, y: 24 } },
+  3: { room: { x: 40.4, y: 10.4 }, label: { x: 28, y: 5 } },
+  4: { room: { x: 61.1, y: 10.4 }, label: { x: 76, y: 5 } },
+  5: { room: { x: 82.2, y: 44.2 }, label: { x: 91.5, y: 32 } },
+  6: { room: { x: 61.1, y: 74.8 }, label: { x: 77.5, y: 90 } },
+  7: { room: { x: 21.8, y: 76.4 }, label: { x: 8, y: 90 } },
 };
 
 export default function FloorPlanMap() {
@@ -29,8 +30,8 @@ export default function FloorPlanMap() {
     <div className="relative border border-white/10 overflow-hidden">
       {/* The living map */}
       <video
-        src="/videos/hero/hero3.mp4"
-        poster="/videos/hero/hero3-poster.jpg"
+        src="/videos/hero/hero3-map.mp4"
+        poster="/videos/hero/hero3-map-poster.jpg"
         autoPlay
         loop
         muted

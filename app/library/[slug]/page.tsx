@@ -541,7 +541,13 @@ export default function PrinciplePage({
 
             {/* Chapter coach identity */}
             <div className="inline-flex items-center gap-3 border border-[#C9A227]/30 px-4 py-3 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] shadow-[0_0_8px_rgba(201,162,39,0.6)]" />
+              <Image
+                src={`/images/coaches/r${principle.number}.jpg`}
+                alt={principle.coach.name}
+                width={48}
+                height={48}
+                className="rounded-full object-cover border border-[#C9A227]/50 shadow-[0_0_12px_rgba(201,162,39,0.3)]"
+              />
               <div>
                 <p className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.25em]">
                   YOUR BILLION DOLLAR COACH
@@ -852,6 +858,15 @@ export default function PrinciplePage({
                 CHAPTER {principle.number} COACH
               </span>
               <div className="w-8 h-px bg-[#C9A227]/50" />
+            </div>
+            <div className="flex justify-center mb-6">
+              <Image
+                src={`/images/coaches/r${principle.number}.jpg`}
+                alt={principle.coach.name}
+                width={96}
+                height={96}
+                className="rounded-full object-cover border-2 border-[#C9A227]/60 shadow-[0_0_30px_rgba(201,162,39,0.35)]"
+              />
             </div>
             <h2 className="font-mono text-2xl sm:text-3xl text-white tracking-wide mb-4">
               {principle.coach.name.toUpperCase()}

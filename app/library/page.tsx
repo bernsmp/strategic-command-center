@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Terminal, ChevronRight, Copy, Check, ClipboardCopy, FolderCog, FileCode2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import GatedPrompt, { TicketGateProvider } from "@/components/GatedPrompt";
 import FloorPlanMap from "@/components/FloorPlanMap";
 import Navigation from "@/components/Navigation";
@@ -126,9 +127,18 @@ function PrincipleModule({ principle, index }: { principle: typeof principles[0]
           </div>
 
           {/* Coach name - the headline */}
-          <h3 className="font-mono text-sm tracking-[0.15em] text-white/90 uppercase mb-1 group-hover:text-white transition-colors">
-            {principle.coach.name}
-          </h3>
+          <div className="flex items-center gap-3 mb-1">
+            <Image
+              src={`/images/coaches/r${principle.number}.jpg`}
+              alt={principle.coach.name}
+              width={40}
+              height={40}
+              className="rounded-full object-cover border border-[#C9A227]/50 flex-shrink-0"
+            />
+            <h3 className="font-mono text-sm tracking-[0.15em] text-white/90 uppercase group-hover:text-white transition-colors">
+              {principle.coach.name}
+            </h3>
+          </div>
 
           {/* Principle title as the coach's discipline */}
           <p className="text-[10px] font-mono text-white/40 tracking-[0.2em] uppercase mb-2">
@@ -619,7 +629,7 @@ export default function LibraryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-10 lg:w-[min(90vw,1400px)] lg:relative lg:left-1/2 lg:-translate-x-1/2"
+            className="mb-10 lg:w-[min(97vw,1800px)] lg:relative lg:left-1/2 lg:-translate-x-1/2"
           >
             <FloorPlanMap />
           </motion.div>
@@ -654,9 +664,18 @@ export default function LibraryPage() {
                     ALL SEVEN PRINCIPLES
                   </span>
                 </div>
-                <h3 className="font-mono text-lg text-white tracking-[0.1em] uppercase mb-2">
-                  {masterCoach.name}
-                </h3>
+                <div className="flex items-center gap-4 mb-2">
+                  <Image
+                    src="/images/coaches/master.jpg"
+                    alt={masterCoach.name}
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover border-2 border-[#C9A227]/60 shadow-[0_0_20px_rgba(201,162,39,0.3)]"
+                  />
+                  <h3 className="font-mono text-lg text-white tracking-[0.1em] uppercase">
+                    {masterCoach.name}
+                  </h3>
+                </div>
                 <p className="text-sm text-white/50 leading-relaxed max-w-2xl mb-6">
                   {masterCoach.description}
                 </p>
