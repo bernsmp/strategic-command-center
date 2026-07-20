@@ -39,10 +39,10 @@ export default function FloorPlanMap() {
       />
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-px bg-white/40" />
-      <div className="absolute top-0 left-0 w-px h-4 bg-white/40" />
-      <div className="absolute bottom-0 right-0 w-4 h-px bg-white/40" />
-      <div className="absolute bottom-0 right-0 w-px h-4 bg-white/40" />
+      <div className="absolute top-0 left-0 w-4 h-px bg-[#C9A227]/60" />
+      <div className="absolute top-0 left-0 w-px h-4 bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 right-0 w-4 h-px bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 right-0 w-px h-4 bg-[#C9A227]/60" />
 
       {/* Leader lines: room dot to label, drawn in percent space */}
       <svg
@@ -89,7 +89,7 @@ export default function FloorPlanMap() {
               className="hidden sm:flex absolute -translate-x-1/2 -translate-y-1/2 px-2.5 py-1.5 bg-black/60 backdrop-blur-[2px] border border-white/10 hover:border-[#C9A227]/60 transition-colors no-underline"
               style={{ left: `${r.label.x}%`, top: `${r.label.y}%` }}
             >
-              <span className="font-mono text-[10px] tracking-[0.25em] text-white/80">
+              <span className="font-mono text-[10px] lg:text-[11px] tracking-[0.25em] text-white/80">
                 ROOM {String(p.number).padStart(2, "0")}
               </span>
             </Link>
@@ -99,8 +99,8 @@ export default function FloorPlanMap() {
 
       {/* You are here */}
       <div className="absolute left-1/2 bottom-[3%] -translate-x-1/2 flex items-center gap-2 pointer-events-none">
-        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-        <span className="font-mono text-[9px] tracking-[0.3em] text-white/60">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] animate-pulse shadow-[0_0_8px_rgba(201,162,39,0.9)]" />
+        <span className="font-mono text-[9px] lg:text-[10px] tracking-[0.3em] text-[#C9A227]/80">
           YOU ARE HERE
         </span>
       </div>

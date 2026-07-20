@@ -83,14 +83,14 @@ function PrincipleModule({ principle, index }: { principle: typeof principles[0]
         {/* Main card */}
         <div className="relative border border-white/10 bg-black p-6 transition-all duration-300 group-hover:border-white/30 overflow-hidden">
           {/* Corner accents - 1px precision lines */}
-          <div className="absolute top-0 left-0 w-4 h-px bg-white/40" />
-          <div className="absolute top-0 left-0 w-px h-4 bg-white/40" />
-          <div className="absolute top-0 right-0 w-4 h-px bg-white/40" />
-          <div className="absolute top-0 right-0 w-px h-4 bg-white/40" />
-          <div className="absolute bottom-0 left-0 w-4 h-px bg-white/40" />
-          <div className="absolute bottom-0 left-0 w-px h-4 bg-white/40" />
-          <div className="absolute bottom-0 right-0 w-4 h-px bg-white/40" />
-          <div className="absolute bottom-0 right-0 w-px h-4 bg-white/40" />
+          <div className="absolute top-0 left-0 w-4 h-px bg-[#C9A227]/60" />
+          <div className="absolute top-0 left-0 w-px h-4 bg-[#C9A227]/60" />
+          <div className="absolute top-0 right-0 w-4 h-px bg-[#C9A227]/60" />
+          <div className="absolute top-0 right-0 w-px h-4 bg-[#C9A227]/60" />
+          <div className="absolute bottom-0 left-0 w-4 h-px bg-[#C9A227]/60" />
+          <div className="absolute bottom-0 left-0 w-px h-4 bg-[#C9A227]/60" />
+          <div className="absolute bottom-0 right-0 w-4 h-px bg-[#C9A227]/60" />
+          <div className="absolute bottom-0 right-0 w-px h-4 bg-[#C9A227]/60" />
 
           {/* Scan effect on hover */}
           {isHovered && <ScanLine />}
@@ -148,7 +148,7 @@ function PrincipleModule({ principle, index }: { principle: typeof principles[0]
             <div
               className={`w-1.5 h-1.5 rounded-full transition-all ${
                 principle.stories.length > 0
-                  ? "bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.4)] group-hover:bg-white"
+                  ? "bg-[#C9A227] shadow-[0_0_8px_rgba(201,162,39,0.5)] group-hover:bg-[#E3C766]"
                   : "bg-white/30 group-hover:bg-white/50"
               }`}
             />
@@ -526,8 +526,8 @@ export default function LibraryPage() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-8"
           >
-            <div className="w-2 h-2 rounded-full bg-white/60 shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
-            <span className="text-xs font-mono text-white/50 tracking-[0.3em]">
+            <div className="w-2 h-2 rounded-full bg-[#C9A227] shadow-[0_0_10px_rgba(201,162,39,0.6)]" />
+            <span className="text-xs font-mono text-[#C9A227]/80 tracking-[0.3em]">
               STRATEGIC OPERATING SYSTEM v1.0
             </span>
           </motion.div>
@@ -554,18 +554,42 @@ export default function LibraryPage() {
             Seven rooms. Seven ways of seeing. One coach on duty in each.
           </motion.p>
 
+          {/* Entry choice: reader picks the mode, never a forced order */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="#floor-plan"
+              className="px-6 py-3 border border-[#C9A227]/50 text-[#C9A227] font-mono text-xs tracking-[0.2em] hover:bg-[#C9A227] hover:text-black transition-colors"
+            >
+              SELF-EXPLORE THE ROOMS
+            </a>
+            <Link
+              href="/library/perceptual-asymmetry"
+              className="px-6 py-3 border border-white/20 text-white/70 font-mono text-xs tracking-[0.2em] hover:border-white/50 hover:text-white transition-colors"
+            >
+              TAKE THE GUIDED TOUR
+            </Link>
+            <span className="text-[10px] font-mono text-white/30 tracking-wider w-full sm:w-auto">
+              YOUR CHOICE · NO FORCED ORDER
+            </span>
+          </motion.div>
+
           {/* 1px separator line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="mt-12 h-px bg-gradient-to-r from-white/20 via-white/40 to-transparent origin-left"
+            className="mt-12 h-px bg-gradient-to-r from-[#C9A227]/50 via-[#C9A227]/25 to-transparent origin-left"
           />
         </div>
       </section>
 
       {/* The 7 Principles - Main Modules */}
-      <section className="py-16 px-6">
+      <section id="floor-plan" className="py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <motion.div
@@ -575,8 +599,8 @@ export default function LibraryPage() {
             className="mb-10"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-white/30" />
-              <span className="text-xs font-mono text-white/40 tracking-[0.3em]">
+              <div className="w-8 h-px bg-[#C9A227]/50" />
+              <span className="text-xs font-mono text-[#C9A227]/80 tracking-[0.3em]">
                 THE FLOOR PLAN · ONE ROOM PER CHAPTER
               </span>
             </div>
@@ -595,7 +619,7 @@ export default function LibraryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-10"
+            className="mb-10 lg:w-[min(90vw,1400px)] lg:relative lg:left-1/2 lg:-translate-x-1/2"
           >
             <FloorPlanMap />
           </motion.div>
@@ -620,10 +644,10 @@ export default function LibraryPage() {
             className="mt-10"
           >
             <div className="border border-white/20 bg-black relative">
-              <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
+              <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#C9A227]/80 to-transparent" />
               <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[10px] font-mono text-white/60 tracking-wider border border-white/20 px-1.5 py-0.5">
+                  <span className="text-[10px] font-mono text-[#C9A227] tracking-wider border border-[#C9A227]/40 px-1.5 py-0.5">
                     MASTER COACH
                   </span>
                   <span className="text-[10px] font-mono text-white/40 tracking-wider">

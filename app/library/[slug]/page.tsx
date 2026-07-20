@@ -23,12 +23,58 @@ import { recordEvent } from "@/lib/gate";
 import { getPrincipleBySlug, principles } from "@/lib/principles";
 
 // Chapter-specific images mapping
+// Facade gold (matches /world) carried into the interior rooms: #C9A227
 const chapterImages: Record<string, { network?: string; spark?: string }> = {
   "perceptual-asymmetry": {
     network: "/images/ch1-network.png",
     spark: "/images/ch1-spark.png",
   },
 };
+
+// Room entry: the doors part along a gold seam, the room number is announced,
+// then the room reveals itself. Runs once per room mount.
+function RoomEntry({ number, title }: { number: number; title: string }) {
+  const doorEase = [0.76, 0, 0.24, 1] as const;
+  return (
+    <div className="fixed inset-0 z-[70] pointer-events-none">
+      {/* Left door */}
+      <motion.div
+        className="absolute inset-y-0 left-0 w-1/2 bg-[#030303] border-r border-[#C9A227]/40"
+        initial={{ x: 0 }}
+        animate={{ x: "-101%" }}
+        transition={{ delay: 1.3, duration: 1.5, ease: doorEase }}
+      />
+      {/* Right door */}
+      <motion.div
+        className="absolute inset-y-0 right-0 w-1/2 bg-[#030303] border-l border-[#C9A227]/40"
+        initial={{ x: 0 }}
+        animate={{ x: "101%" }}
+        transition={{ delay: 1.3, duration: 1.5, ease: doorEase }}
+      />
+      {/* Gold seam of light where the doors meet */}
+      <motion.div
+        className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-[#C9A227] shadow-[0_0_24px_4px_rgba(201,162,39,0.5)]"
+        initial={{ scaleY: 0, opacity: 0 }}
+        animate={{ scaleY: [0, 1, 1, 1], opacity: [0, 1, 1, 0] }}
+        transition={{ duration: 2.9, times: [0, 0.3, 0.5, 1], ease: "easeInOut" }}
+      />
+      {/* Room announcement on the doors */}
+      <motion.div
+        className="absolute inset-0 flex flex-col items-center justify-center gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 1, 0] }}
+        transition={{ duration: 2.4, times: [0, 0.2, 0.5, 0.75], ease: "easeInOut" }}
+      >
+        <span className="font-mono text-[10px] tracking-[0.5em] text-[#C9A227]/90">
+          ROOM {String(number).padStart(2, "0")}
+        </span>
+        <span className="font-mono text-lg sm:text-2xl tracking-[0.2em] text-white/80 uppercase text-center px-6">
+          {title}
+        </span>
+      </motion.div>
+    </div>
+  );
+}
 
 // Electricity spark particle component
 function ElectricitySpark({ delay = 0 }: { delay?: number }) {
@@ -304,14 +350,14 @@ function StoryCard({
       transition={{ delay: index * 0.1 }}
     >
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-6 h-px bg-white/40" />
-      <div className="absolute top-0 left-0 w-px h-6 bg-white/40" />
-      <div className="absolute top-0 right-0 w-6 h-px bg-white/40" />
-      <div className="absolute top-0 right-0 w-px h-6 bg-white/40" />
-      <div className="absolute bottom-0 left-0 w-6 h-px bg-white/40" />
-      <div className="absolute bottom-0 left-0 w-px h-6 bg-white/40" />
-      <div className="absolute bottom-0 right-0 w-6 h-px bg-white/40" />
-      <div className="absolute bottom-0 right-0 w-px h-6 bg-white/40" />
+      <div className="absolute top-0 left-0 w-6 h-px bg-[#C9A227]/60" />
+      <div className="absolute top-0 left-0 w-px h-6 bg-[#C9A227]/60" />
+      <div className="absolute top-0 right-0 w-6 h-px bg-[#C9A227]/60" />
+      <div className="absolute top-0 right-0 w-px h-6 bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 left-0 w-6 h-px bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 left-0 w-px h-6 bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 right-0 w-6 h-px bg-[#C9A227]/60" />
+      <div className="absolute bottom-0 right-0 w-px h-6 bg-[#C9A227]/60" />
 
       <div className="p-8">
         <div className="flex items-start gap-4 mb-6">
@@ -359,8 +405,8 @@ function StoryCard({
               />
             )}
 
-            <div className="border-l border-white/30 pl-6">
-              <p className="text-[10px] font-mono text-white/50 tracking-[0.2em] mb-3">
+            <div className="border-l border-[#C9A227]/50 pl-6">
+              <p className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em] mb-3">
                 THE LESSON
               </p>
               <p className="text-white/80 leading-relaxed">{story.lesson}</p>
@@ -426,6 +472,7 @@ export default function PrinciplePage({
     <TicketGateProvider>
     <main className="min-h-screen bg-black">
       <Navigation />
+      <RoomEntry number={principle.number} title={principle.title} />
 
       {/* Hero Section with Network Background */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden min-h-[80vh] flex items-center">
@@ -448,6 +495,7 @@ export default function PrinciplePage({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ delay: 1.6, duration: 0.9 }}
             className="mb-12"
           >
             <Link
@@ -463,15 +511,15 @@ export default function PrinciplePage({
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 1.7, duration: 1 }}
             className="mb-8"
           >
             <div className="flex items-end gap-6">
-              <span className="font-mono text-[120px] sm:text-[180px] font-light text-white/10 leading-none">
+              <span className="font-mono text-[120px] sm:text-[180px] font-light text-[#C9A227]/15 leading-none">
                 {String(principle.number).padStart(2, '0')}
               </span>
               <div className="pb-6">
-                <span className="text-[10px] font-mono text-white/40 tracking-[0.3em]">
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.3em]">
                   ROOM {principle.number} OF 7
                 </span>
               </div>
@@ -482,7 +530,7 @@ export default function PrinciplePage({
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 2.0, duration: 1 }}
           >
             <p className="text-[10px] font-mono text-white/40 tracking-[0.2em] mb-4">
               {principle.subtitle}
@@ -492,10 +540,10 @@ export default function PrinciplePage({
             </h1>
 
             {/* Chapter coach identity */}
-            <div className="inline-flex items-center gap-3 border border-white/15 px-4 py-3 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+            <div className="inline-flex items-center gap-3 border border-[#C9A227]/30 px-4 py-3 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] shadow-[0_0_8px_rgba(201,162,39,0.6)]" />
               <div>
-                <p className="text-[10px] font-mono text-white/40 tracking-[0.25em]">
+                <p className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.25em]">
                   YOUR BILLION DOLLAR COACH
                 </p>
                 <p className="font-mono text-sm text-white/90 tracking-[0.1em] uppercase">
@@ -504,7 +552,7 @@ export default function PrinciplePage({
               </div>
               <a
                 href="#coach"
-                className="ml-4 text-[10px] font-mono text-white/50 tracking-wider border border-white/15 px-3 py-1.5 hover:border-white/40 hover:text-white transition-all"
+                className="ml-4 text-[10px] font-mono text-white/50 tracking-wider border border-white/15 px-3 py-1.5 hover:border-[#C9A227]/60 hover:text-[#C9A227] transition-all"
               >
                 MEET THEM ↓
               </a>
@@ -515,21 +563,21 @@ export default function PrinciplePage({
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-32 h-px bg-white/30 mb-10 origin-left"
+            transition={{ delay: 2.4, duration: 1.1 }}
+            className="w-32 h-px bg-[#C9A227]/60 mb-10 origin-left"
           />
 
           {/* Jay Quote - terminal style */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 2.6, duration: 1 }}
             className="max-w-3xl"
           >
             <div className="border border-white/10 p-8 relative">
               {/* Terminal header */}
               <div className="absolute -top-3 left-6 bg-black px-3">
-                <span className="text-[10px] font-mono text-white/40 tracking-wider">
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-wider">
                   JAY ABRAHAM
                 </span>
               </div>
@@ -558,7 +606,7 @@ export default function PrinciplePage({
               </div>
             </div>
             <div>
-              <p className="text-[10px] font-mono text-white/40 tracking-[0.2em] mb-4">
+              <p className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em] mb-4">
                 THE CORE PRINCIPLE
               </p>
               <p className="text-2xl sm:text-3xl text-white font-light leading-relaxed">
@@ -578,8 +626,8 @@ export default function PrinciplePage({
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-8 h-px bg-white/30" />
-              <span className="text-[10px] font-mono text-white/40 tracking-[0.2em]">
+              <div className="w-8 h-px bg-[#C9A227]/50" />
+              <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em]">
                 CHOOSE YOUR PATH
               </span>
             </div>
@@ -635,9 +683,9 @@ export default function PrinciplePage({
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-10">
-                <div className="w-8 h-px bg-white/30" />
+                <div className="w-8 h-px bg-[#C9A227]/50" />
                 <Eye className="w-5 h-5 text-white/40" />
-                <span className="text-[10px] font-mono text-white/40 tracking-[0.2em]">
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em]">
                   DECODING THE GENIUS
                 </span>
               </div>
@@ -673,8 +721,8 @@ export default function PrinciplePage({
               className="max-w-3xl"
             >
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
-                <span className="text-[10px] font-mono text-white/50 tracking-[0.3em]">
+                <div className="w-2 h-2 rounded-full bg-[#C9A227] shadow-[0_0_15px_rgba(201,162,39,0.6)]" />
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.3em]">
                   THE KEY INSIGHT
                 </span>
               </div>
@@ -684,7 +732,7 @@ export default function PrinciplePage({
               </p>
 
               {/* Glow line */}
-              <div className="mt-10 h-px bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
+              <div className="mt-10 h-px bg-gradient-to-r from-[#C9A227]/70 via-[#C9A227]/25 to-transparent" />
             </motion.div>
           </div>
         </section>
@@ -701,8 +749,8 @@ export default function PrinciplePage({
               className="mb-12"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-px bg-white/30" />
-                <span className="text-[10px] font-mono text-white/40 tracking-[0.2em]">
+                <div className="w-8 h-px bg-[#C9A227]/50" />
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em]">
                   JAY IN ACTION
                 </span>
               </div>
@@ -736,8 +784,8 @@ export default function PrinciplePage({
               className="mb-12"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-px bg-white/30" />
-                <span className="text-[10px] font-mono text-white/40 tracking-[0.2em]">
+                <div className="w-8 h-px bg-[#C9A227]/50" />
+                <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.2em]">
                   THINKING LIKE JAY
                 </span>
               </div>
@@ -757,8 +805,8 @@ export default function PrinciplePage({
                   transition={{ delay: index * 0.1 }}
                 >
                   {/* Corner accents */}
-                  <div className="absolute top-0 left-0 w-3 h-px bg-white/40" />
-                  <div className="absolute top-0 left-0 w-px h-3 bg-white/40" />
+                  <div className="absolute top-0 left-0 w-3 h-px bg-[#C9A227]/60" />
+                  <div className="absolute top-0 left-0 w-px h-3 bg-[#C9A227]/60" />
 
                   <div className="flex items-start gap-6">
                     <span className="w-10 h-10 border border-white/20 flex items-center justify-center font-mono text-lg text-white/40 flex-shrink-0 group-hover:border-white/40 group-hover:text-white/60 transition-all">
@@ -799,11 +847,11 @@ export default function PrinciplePage({
             className="text-center mb-12"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-white/30" />
-              <span className="text-[10px] font-mono text-white/40 tracking-[0.3em]">
+              <div className="w-8 h-px bg-[#C9A227]/50" />
+              <span className="text-[10px] font-mono text-[#C9A227]/80 tracking-[0.3em]">
                 CHAPTER {principle.number} COACH
               </span>
-              <div className="w-8 h-px bg-white/30" />
+              <div className="w-8 h-px bg-[#C9A227]/50" />
             </div>
             <h2 className="font-mono text-2xl sm:text-3xl text-white tracking-wide mb-4">
               {principle.coach.name.toUpperCase()}
@@ -827,7 +875,7 @@ export default function PrinciplePage({
               <div className="flex items-center gap-4">
                 <Terminal className="w-4 h-4 text-white/40" />
                 {principle.prompt.isGeniusExtraction && (
-                  <span className="px-3 py-1 text-[10px] font-mono tracking-wider text-white/70 border border-white/20 flex items-center gap-2">
+                  <span className="px-3 py-1 text-[10px] font-mono tracking-wider text-[#C9A227] border border-[#C9A227]/40 flex items-center gap-2">
                     <Sparkles className="w-3 h-3" />
                     GENIUS EXTRACTION™
                   </span>
@@ -934,7 +982,7 @@ export default function PrinciplePage({
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/library"
-              className="px-6 py-3 bg-white text-black font-mono text-sm tracking-wide hover:bg-white/90 transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-[#C9A227] text-black font-mono text-sm tracking-wide hover:bg-[#E3C766] transition-colors flex items-center gap-2"
             >
               MEET ALL SEVEN COACHES
               <ArrowRight className="w-4 h-4" />
