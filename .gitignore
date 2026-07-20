@@ -38,3 +38,6 @@ next-env.d.ts
 
 # claude code session logs
 .claude/
+
+# original uncompressed world clips (local only)
+public/videos/world/_orig/

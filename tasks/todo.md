@@ -1,3 +1,34 @@
+# Plan 2026-07-20: Post-call next steps (PENDING MAX APPROVAL)
+
+State check: site deployed to Vercel Jul 14 (deploy-for-Jay-demo commitment met). Last commit Jul 13; uncommitted in tree: mobile video variants + scrub-engine preload fix (real perf work), plus the call extract doc. Aug 1 wrap target = 12 days out.
+
+## P0 — Hygiene (today, no decisions needed)
+- [ ] Commit + push the uncommitted work: mobile clips (`leg*-m.mp4`), preload fix, `app/world/page.tsx`, `docs/CALL-EXTRACT-2026-07-13.md`, PHASE-2-PLAN edits. Decide `_orig/` handling (probably gitignore, keep local).
+- [ ] Redeploy so production gets the mobile/perf fix (Jay demo may happen on a phone).
+
+## P1 — Track 1: capture goes real (blocks everything downstream)
+- [ ] Get the GHL webhook URL (Michelle's GHL account — ask her, or Max has access?). Set `GATE_WEBHOOK_URL` on Vercel, redeploy, send a test unlock, confirm the contact lands in GHL. Until then production captures nothing.
+- [ ] Once verified: point Mike's GoDaddy domain at the Vercel build.
+- [ ] Gate copy: adopt Jay's "I'm investing in you" registration framing; keep email required, soften proof-of-purchase per the call.
+
+## P2 — Pre-demo polish still owed from the call (none of it shipped yet)
+- [ ] Interior gold pass across rooms (rooms predate the facade design)
+- [ ] Slower, more dramatic room-entry transitions
+- [ ] Entry choice button: "Self-explore" vs "Take a guided tour" (Radiant Reflections pattern)
+- [ ] Bigger live "you are here" map
+- [ ] Build the 2 remaining world-scroll rooms (5 of 7 built)
+
+## P3 — Coach avatars (likeness approved on the call)
+- [ ] Generate Jay-likeness avatars, one jacket color per coach, black+gold treatment, from the jay-mirror April image pack. Room heroes + coach cards + floor plan.
+
+## P4 — Follow-ups to chase (people, not code)
+- [ ] Did Mike demo V1 to Jay last week? (drives Jay audio capture window)
+- [ ] Michelle's UTM→JI mechanics detail was due "by next week" = now. Nudge.
+- [ ] Simmons voice note report to Michelle (Max's open To Do)
+- [ ] Last Door single lead offer: still an open Max/Mike/Michelle decision — put it on the next call agenda; the routed-menu shell can be built meanwhile.
+
+---
+
 # Plan 2026-07-13: Write rooms 2-7 walkthrough content (PENDING MAX APPROVAL)
 
 Goal: fill the five placeholder fields per room in `lib/principles.ts` for chapters 2-7 so every room is complete end to end like Room 1. The coach prompts are already done; this is the reading layer around them.
@@ -202,3 +233,22 @@ None required for basic functionality
 - [ ] Implement user authentication
 - [ ] Add prompt favorites/saves
 - [ ] Build more workflow paths
+
+---
+
+## Session 2026-07-13 (late): three-way call extracted, Phase 2 decisions slotted
+
+- Pulled the Jul 13 Max+Mike+Michelle call from Granola via `granola-api`/`granola-pull` (MCP OAuth was expired; the Keychain-backed CLI worked). Filed to the Mike David client folder: `/Users/maxb/Desktop/mb-brain/1 - Clients/Mike David/07 - Source Material/transcripts/2026-07-13-max-mike-michelle-three-way.md`
+- Wrote the verified extraction: `docs/CALL-EXTRACT-2026-07-13.md` (36 facts, 34 CONFIRMED, 2 minor UNCERTAIN; extraction-verify table included; known Granola diarization bleed between Mike/Michelle labels resolved by content)
+- Updated `docs/PHASE-2-PLAN.md`: all three (call decision) markers resolved or narrowed. CRM = Go High Level (Michelle). Room order = free navigation + guided-tour choice button. Last Door = three-path menu (How-To / Jay via Rob / Mastermind), single lead offer still open. Added: entry-gate proof-of-purchase now an open question (email capture stays), Jay per-chapter audio approved in principle, gold + slower transitions as pre-deploy scope, deploy-this-week milestone for the Mike-to-Jay V1 demo.
+- Notion: 2 To Dos created (deploy for Jay demo; Simmons voice note) + 1 Brain Data Decision entry, all linked to the Billion Dollar Mind Book project row.
+- NOT done, blocked on Max: regenerating the Phase 2 Google Doc (regen creates a new URL; waiting on Max to confirm the current URL was never shared, per handoff). Avatars still parked pending "go avatars."
+
+### Next work queue (from the call)
+- [ ] Interior gold pass across rooms (they predate the facade design)
+- [ ] Slower, more dramatic room-entry transitions
+- [ ] Build the 2 remaining world-scroll rooms (5 of 7 built)
+- [ ] Deploy for the Jay demo (this week; Notion To Do exists)
+- [ ] Guided-tour vs self-explore choice button at entry
+- [ ] Make the live "you are here" map bigger
+- [ ] Later: glossary pop-up (Michelle: nice-to-have, not critical)

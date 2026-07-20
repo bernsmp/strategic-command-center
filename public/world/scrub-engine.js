@@ -222,7 +222,10 @@ function mountScrollWorld(container, config) {
 
     for (let i = 0; i < NSEG; i++) {
       const s = SEGMENTS[i];
-      if (y > s.start - 1.6 * vh && y < s.end + 1.6 * vh) loadClip(s);
+      // Preload only the current segment and the one just ahead (~0.55vh).
+      // The previous 1.6vh window fetched two full clips on first paint
+      // (~14MB of blobs) and made cold loads feel stuck on the poster.
+      if (y > s.start - 0.55 * vh && y < s.end + 0.55 * vh) loadClip(s);
       const local = clamp((y - s.start) / (s.end - s.start), 0, 1);
       s.target = s.linger ? lingerEase(local, s.linger) : local;
       let outside = 0;
