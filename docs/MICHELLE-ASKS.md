@@ -45,8 +45,9 @@ Source for most items: the 2026-07-13 three-way call (`docs/CALL-EXTRACT-2026-07
 10. **Did Mike demo V1 to Jay last week?** Determines whether the Jay audio
     capture window is already open.
 
-## What Max owes HER (so the list is fair both ways)
+## What Max owes her — ALL CLEARED (per Max, 2026-07-20)
 
-- The Roger Rabbit user-journey doc + the Compass HQ curriculum (spec sources
-  for attractions/showrooms).
-- Report on what Michael Simmons' voice note said.
+- ~~Roger Rabbit user-journey doc + Compass HQ curriculum~~ — sent.
+- ~~Simmons voice note report~~ — done; Michael Simmons is backing out.
+
+Status: email draft with the full list created in Max's Gmail 2026-07-20.

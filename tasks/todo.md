@@ -258,4 +258,4 @@ None required for basic functionality
 - [ ] Deploy for the Jay demo (this week; Notion To Do exists)
 - [ ] Guided-tour vs self-explore choice button at entry
 - [ ] Make the live "you are here" map bigger
-- [ ] Later: glossary pop-up (Michelle: nice-to-have, not critical)
+- [x] Glossary → built as The Appendix page (/appendix), 2026-07-20: AI tool terms for non-technical readers + Jay's named ideas + seven rooms at a glance; linked from Library + room CTAs. Confirmed by Max as the thing he meant.
