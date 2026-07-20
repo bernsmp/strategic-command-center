@@ -511,6 +511,7 @@ Analyze:
 export default function LibraryPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPrinciple, setSelectedPrinciple] = useState("ALL");
+  const [archiveOpen, setArchiveOpen] = useState(false);
 
   const filteredPrompts = prompts.filter((prompt) => {
     const matchesSearch =
@@ -617,10 +618,9 @@ export default function LibraryPage() {
             <h2 className="font-mono text-2xl text-white/90 tracking-wide">
               The Seven Rooms
             </h2>
-            <p className="mt-2 text-sm text-white/40 max-w-2xl">
-              You&apos;re inside the Billion Dollar Mind. Each chapter of the book opens one room,
-              and each room is home to one of the seven Billion Dollar Coaches. The way of seeing
-              each room trains was running in Jay the whole time. Enter a room to have it trained into you.
+            <p className="mt-2 text-sm text-white/60 max-w-2xl">
+              Each chapter of the book opens one room. Step inside and that
+              chapter&apos;s coach trains its way of seeing into you.
             </p>
           </motion.div>
 
@@ -786,10 +786,23 @@ export default function LibraryPage() {
             <h2 className="font-mono text-2xl text-white/90 tracking-wide">
               Strategic Transmissions
             </h2>
-            <p className="mt-2 text-sm text-white/40">
-              Genius Extractions™ and tactical prompts. Each one designed to shift perception.
+            <p className="mt-2 text-sm text-white/60 max-w-2xl">
+              Six standalone prompts from the book, beyond the room coaches.
+              Optional extra credit; the rooms above are the main path.
             </p>
+            {!archiveOpen && (
+              <button
+                onClick={() => setArchiveOpen(true)}
+                className="mt-6 px-6 py-3 border border-[#C9A227]/40 text-[#C9A227]/90 font-mono text-xs tracking-[0.2em] hover:bg-[#C9A227] hover:text-black transition-colors"
+              >
+                OPEN THE ARCHIVE ({prompts.length})
+              </button>
+            )}
           </motion.div>
+
+          {archiveOpen && (
+          <>
+
 
           {/* Search and filters */}
           <div className="mb-8 flex flex-col sm:flex-row gap-4">
@@ -853,6 +866,8 @@ export default function LibraryPage() {
                 [ CLEAR FILTERS ]
               </button>
             </div>
+          )}
+          </>
           )}
         </div>
       </section>

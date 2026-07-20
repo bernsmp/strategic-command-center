@@ -76,6 +76,55 @@ function RoomEntry({ number, title }: { number: number; title: string }) {
   );
 }
 
+// Long prose served in short pours: first two paragraphs visible, the rest
+// behind one clear expander, so non-technical readers never face a wall of text.
+function ExpandableProse({ paragraphs, visibleCount = 2 }: { paragraphs: string[]; visibleCount?: number }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const shown = isOpen ? paragraphs : paragraphs.slice(0, visibleCount);
+  const hidden = paragraphs.length - visibleCount;
+  return (
+    <div className="text-white/70 leading-relaxed space-y-6 max-w-3xl">
+      {shown.map((para, i) => (
+        <p key={i} className="text-lg">
+          {para}
+        </p>
+      ))}
+      {hidden > 0 && (
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-[#C9A227]/90 text-xs font-mono tracking-wider hover:text-[#E3C766] transition-colors flex items-center gap-2"
+        >
+          [ {isOpen ? "SHOW LESS" : "KEEP READING"} ]
+        </button>
+      )}
+    </div>
+  );
+}
+
+// The prompt is a tool to copy, not homework to read: collapsed preview with a
+// fade, one toggle for the curious.
+function CollapsiblePrompt({ content }: { content: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div>
+      <div className={`relative overflow-hidden ${isOpen ? "" : "max-h-56"}`}>
+        <pre className="font-mono text-sm text-white/60 whitespace-pre-wrap leading-relaxed">
+          {content}
+        </pre>
+        {!isOpen && (
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+        )}
+      </div>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="mt-3 text-[#C9A227]/90 text-xs font-mono tracking-wider hover:text-[#E3C766] transition-colors"
+      >
+        [ {isOpen ? "COLLAPSE THE PROMPT" : "SHOW THE FULL PROMPT"} ]
+      </button>
+    </div>
+  );
+}
+
 // Electricity spark particle component
 function ElectricitySpark({ delay = 0 }: { delay?: number }) {
   return (
@@ -696,13 +745,7 @@ export default function PrinciplePage({
                 </span>
               </div>
 
-              <div className="text-white/60 leading-relaxed space-y-6 max-w-3xl">
-                {principle.whatJaySees.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-lg">
-                    {para}
-                  </p>
-                ))}
-              </div>
+              <ExpandableProse paragraphs={principle.whatJaySees.split("\n\n")} />
             </motion.div>
           </div>
         </section>
@@ -822,7 +865,7 @@ export default function PrinciplePage({
                       <h3 className="font-mono text-white text-lg tracking-wide mb-2">
                         {check.area}
                       </h3>
-                      <p className="text-white/50 leading-relaxed">
+                      <p className="text-white/65 leading-relaxed">
                         {check.question}
                       </p>
                     </div>
@@ -871,7 +914,7 @@ export default function PrinciplePage({
             <h2 className="font-mono text-2xl sm:text-3xl text-white tracking-wide mb-4">
               {principle.coach.name.toUpperCase()}
             </h2>
-            <p className="text-white/50 max-w-2xl mx-auto">
+            <p className="text-white/65 max-w-2xl mx-auto">
               {principle.prompt.description}
             </p>
             <p className="mt-4 text-xs font-mono text-white/30 tracking-wider">
@@ -903,10 +946,12 @@ export default function PrinciplePage({
 
             {/* Prompt Content */}
             <div className="p-6 bg-white/[0.02]">
+              <p className="mb-4 text-sm text-white/60 leading-relaxed">
+                You don&apos;t need to read this. Copy it below, paste it into your AI
+                tool, and the coach takes it from there.
+              </p>
               <GatedPrompt where={`library/${principle.slug}:prompt`}>
-                <pre className="font-mono text-sm text-white/60 whitespace-pre-wrap leading-relaxed">
-                  {principle.prompt.content}
-                </pre>
+                <CollapsiblePrompt content={principle.prompt.content} />
               </GatedPrompt>
             </div>
 
@@ -990,7 +1035,7 @@ export default function PrinciplePage({
           <h2 className="font-mono text-xl sm:text-2xl text-white tracking-wide mb-4">
             READY TO SEE YOUR BUSINESS DIFFERENTLY?
           </h2>
-          <p className="text-white/50 mb-10">
+          <p className="text-white/65 mb-10">
             Explore all seven principles and discover the opportunities hiding
             in plain sight.
           </p>
