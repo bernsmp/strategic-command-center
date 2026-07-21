@@ -9,7 +9,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "The Portal", description: "Home" },
   { href: "/library", label: "The Library", description: "Prompt Repository" },
-  { href: "/world", label: "The World", description: "Walk the rooms" },
+  { href: "/world", label: "Step Inside", description: "Walk the rooms" },
 ];
 
 export default function Navigation() {
