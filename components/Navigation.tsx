@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "The Portal", description: "Home" },
+  { href: "/portal", label: "The Portal", description: "The book" },
   { href: "/library", label: "The Library", description: "Prompt Repository" },
   { href: "/world", label: "Step Inside", description: "Walk the rooms" },
 ];
